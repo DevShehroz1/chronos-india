@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chronos Properties | Real Estate Bengaluru</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "silver-metallic": "#E2E8F0",
+                "tertiary": "#150700",
+                "background": "#f8f9ff",
+                "secondary-container": "#fed17d",
+                "gold-light": "#DCC08A",
+                "error-container": "#ffdad6",
+                "primary-fixed-dim": "#b6c6f0",
+                "on-secondary": "#ffffff",
+                "outline-variant": "#c5c6cf",
+                "on-surface": "#0b1c30",
+                "surface-container": "#e5eeff",
+                "secondary-fixed-dim": "#ecc06e",
+                "on-primary-fixed": "#081a3b",
+                "secondary-fixed": "#ffdea6",
+                "primary-container": "#0f2041",
+                "on-tertiary-fixed-variant": "#623f1e",
+                "surface-container-highest": "#d3e4fe",
+                "on-error": "#ffffff",
+                "outline": "#75777f",
+                "on-tertiary": "#ffffff",
+                "surface-dim": "#cbdbf5",
+                "surface-container-low": "#eff4ff",
+                "on-primary-fixed-variant": "#374669",
+                "inverse-on-surface": "#eaf1ff",
+                "surface-variant": "#d3e4fe",
+                "on-background": "#0b1c30",
+                "inverse-primary": "#b6c6f0",
+                "surface-bright": "#f8f9ff",
+                "surface-container-lowest": "#ffffff",
+                "inverse-surface": "#213145",
+                "primary": "#000921",
+                "on-surface-variant": "#45464e",
+                "secondary": "#7a590f",
+                "on-tertiary-container": "#ac7f59",
+                "tertiary-fixed": "#ffdcc1",
+                "primary-fixed": "#d9e2ff",
+                "error": "#ba1a1a",
+                "surface-tint": "#4f5e82",
+                "canvas-white": "#FFFFFF",
+                "on-secondary-fixed-variant": "#5e4200",
+                "deep-navy-dark": "#081226",
+                "tertiary-container": "#361a00",
+                "surface": "#f8f9ff",
+                "on-secondary-container": "#78580e",
+                "surface-container-high": "#dce9ff",
+                "on-tertiary-fixed": "#2e1500",
+                "on-primary-container": "#7988af",
+                "tertiary-fixed-dim": "#f0bc92",
+                "on-secondary-fixed": "#271900",
+                "on-error-container": "#93000a",
+                "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "section-gap": "120px",
+                "margin-mobile": "16px",
+                "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                "body-md": ["Manrope", "sans-serif"],
+                "button-text": ["Manrope", "sans-serif"],
+                "label-caps": ["Manrope", "sans-serif"],
+                "headline-xl": ["EB Garamond", "serif"],
+                "body-lg": ["Manrope", "sans-serif"],
+                "headline-md": ["EB Garamond", "serif"],
+                "display-lg-mobile": ["EB Garamond", "serif"],
+                "display-lg": ["EB Garamond", "serif"]
+            },
+            "fontSize": {
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "button-text": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                "headline-xl": ["48px", {"lineHeight": "56px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                "display-lg-mobile": ["40px", {"lineHeight": "48px", "fontWeight": "500"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .scrolling-text-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .scrolling-text {
+            display: inline-block;
+            animation: scroll-left 30s linear infinite;
+        }
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* New Animations */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-zoom {
+            animation: slow-zoom 20s ease-out forwards;
+        }
+        @keyframes slow-zoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.15); }
+        }
+
+        .glow-pulse {
+            animation: glow-pulse 2s infinite ease-in-out;
+        }
+        @keyframes glow-pulse {
+            0%, 100% { box-shadow: 0 0 0px rgba(220, 192, 138, 0); }
+            50% { box-shadow: 0 0 20px rgba(220, 192, 138, 0.6); }
+        }
+
+        .interactive-scale {
+            transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .interactive-scale:active {
+            transform: scale(0.95);
+        }
+
+        .footer-reveal {
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+        .footer-reveal.active {
+            opacity: 1;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal-up, .hero-zoom, .glow-pulse, .interactive-scale, .footer-reveal {
+                animation: none !important;
+                transition: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-canvas-white text-on-background font-body-md overflow-x-hidden">
+<!-- Top Navigation -->
+<nav class="bg-canvas-white dark:bg-primary border-b border-silver-metallic dark:border-primary-container shadow-sm dark:shadow-none fixed top-0 w-full z-50 transition-transform duration-300">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-silver-metallic text-headline-md" data-icon="domain">domain</span>
+<span class="font-headline-md text-headline-md text-primary dark:text-gold-light tracking-tight">CHRONOS</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-secondary font-bold border-b-2 border-secondary font-label-caps text-label-caps uppercase" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-all font-label-caps text-label-caps uppercase" href="#">Portfolio</a>
+<a class="text-on-surface-variant hover:text-primary transition-all font-label-caps text-label-caps uppercase" href="#">Investment</a>
+<a class="text-on-surface-variant hover:text-primary transition-all font-label-caps text-label-caps uppercase" href="#">Insights</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-none font-button-text interactive-scale">Invest With Us</button>
+</div>
+<button class="md:hidden text-primary interactive-scale">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen flex flex-col justify-end pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<img class="w-full h-full object-cover hero-zoom" data-alt="A luxurious high-rise architectural marvel in Bengaluru during golden hour." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8dNbHWQQrsFvTE0t-Pa_-fpxzckFz_8yRVeGrc8Dl-JjeWUEpagpITTX5sR1-G7EnSOSgkELv1AUAhqSPgV6zlpK0LTJ0AtxaZpRHIdfLfGh6JUSsQocvcRhjF8XoU7XM4C6bkW98dxN_zmJiZfIjzrcz8LeWleYcxIfdAJ5qKxcKH5BTm6weFpzvlgN_fNSn4ihwDfB3VT5ZpyMs-5hoBJClZW9qbgPFCnwEl4XG2W9W3e5SHqYr_rCm6m-3Ae07cwL-q9OQrqhH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile pb-12 text-white max-w-container-max mx-auto w-full">
+<div class="flex flex-col gap-4 reveal-up active">
+<p class="font-label-caps text-label-caps text-gold-light tracking-[0.2em] uppercase">Real Estate · Bengaluru</p>
+<h1 class="font-display-lg-mobile text-display-lg-mobile leading-none mb-2">CHRONOS</h1>
+<p class="font-headline-md text-headline-md text-silver-metallic italic opacity-90">Built across time with trust.</p>
+<div class="flex flex-col gap-4 mt-8 md:flex-row">
+<button class="bg-gold-light text-primary font-button-text px-8 py-4 text-center interactive-scale glow-pulse">Invest With Us</button>
+<button class="border border-white/30 backdrop-blur-sm text-white font-button-text px-8 py-4 hover:bg-white/10 transition-colors text-center interactive-scale">Our Services</button>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-12 border-t border-white/20 pt-8">
+<div>
+<p class="font-label-caps text-label-caps text-gold-light mb-1">PARTNERSHIPS</p>
+<p class="font-body-md text-body-md">Landmark Partnerships</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-gold-light mb-1">ASSETS UNDER MANAGEMENT</p>
+<p class="font-body-md text-body-md">₹200Cr+ Prime Assets</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gold Ticker -->
+<div class="bg-secondary text-white py-3 scroller overflow-hidden border-y border-gold-light/20">
+<div class="scrolling-text-container whitespace-nowrap">
+<div class="scrolling-text inline-flex gap-12 font-label-caps text-label-caps tracking-widest uppercase items-center">
+<span>Bengaluru, Karnataka</span> <span class="w-1 h-1 rounded-full bg-white"></span>
+<span>Joint Development</span> <span class="w-1 h-1 rounded-full bg-white"></span>
+<span>Premium Lettings</span> <span class="w-1 h-1 rounded-full bg-white"></span>
+<span>Institutional Trust</span> <span class="w-1 h-1 rounded-full bg-white"></span>
+<span>Bengaluru, Karnataka</span> <span class="w-1 h-1 rounded-full bg-white"></span>
+<span>Joint Development</span> <span class="w-1 h-1 rounded-full bg-white"></span>
+<span>Premium Lettings</span> <span class="w-1 h-1 rounded-full bg-white"></span>
+<span>Institutional Trust</span>
+</div>
+</div>
+</div>
+<!-- Stats Bar -->
+<section class="bg-primary-container text-white py-12 px-margin-mobile">
+<div class="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center">
+<p class="font-headline-md text-headline-md text-gold-light">3</p>
+<p class="font-label-caps text-label-caps opacity-60">Business Arms</p>
+</div>
+<div class="text-center border-l border-white/10">
+<p class="font-headline-md text-headline-md text-gold-light">₹6Cr+</p>
+<p class="font-label-caps text-label-caps opacity-60">Avg. Portfolio</p>
+</div>
+<div class="text-center md:border-l border-white/10">
+<p class="font-headline-md text-headline-md text-gold-light">BLR</p>
+<p class="font-label-caps text-label-caps opacity-60">Focused</p>
+</div>
+<div class="text-center border-l border-white/10">
+<p class="font-headline-md text-headline-md text-gold-light">360°</p>
+<p class="font-label-caps text-label-caps opacity-60">Full Service</p>
+</div>
+</div>
+</section>
+<!-- Three Arms Section -->
+<section class="py-section-gap px-margin-mobile max-w-container-max mx-auto">
+<div class="text-center mb-16 reveal-up">
+<p class="font-label-caps text-label-caps text-secondary tracking-[0.3em] uppercase mb-4">Our Business</p>
+<h2 class="font-headline-xl text-headline-xl text-primary">Three Arms. One Vision.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Arm One -->
+<div class="flex flex-col gap-6 p-8 border border-silver-metallic bg-white transition-all hover:shadow-xl hover:-translate-y-2 group reveal-up" style="transition-delay: 0.1s">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="architecture">architecture</span>
+<h3 class="font-headline-md text-headline-md text-primary">Arm One: Development</h3>
+<p class="text-on-surface-variant font-body-md">Precision-led real estate development focusing on high-growth corridors and sustainable luxury housing.</p>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex gap-2 items-start"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Sustainable Design Concepts</li>
+<li class="flex gap-2 items-start"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Project Life Cycle Management</li>
+<li class="flex gap-2 items-start"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Strategic Land Acquisitions</li>
+</ul>
+</div>
+<!-- Arm Two -->
+<div class="flex flex-col gap-6 p-8 border border-silver-metallic bg-white transition-all hover:shadow-xl hover:-translate-y-2 group reveal-up" style="transition-delay: 0.2s">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="real_estate_agent">real_estate_agent</span>
+<h3 class="font-headline-md text-headline-md text-primary">Arm Two: Brokerage</h3>
+<p class="text-on-surface-variant font-body-md">Curating elite property connections with transparency and institutional-grade negotiation standards.</p>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex gap-2 items-start"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Exclusive Portfolio Access</li>
+<li class="flex gap-2 items-start"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> High-Net-Worth Advisory</li>
+<li class="flex gap-2 items-start"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Legal &amp; Title Diligence</li>
+</ul>
+</div>
+<!-- Arm Three -->
+<div class="flex flex-col gap-6 p-8 border border-silver-metallic bg-white transition-all hover:shadow-xl hover:-translate-y-2 group reveal-up" style="transition-delay: 0.3s">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="settings_suggest">settings_suggest</span>
+<h3 class="font-headline-md text-headline-md text-primary">Arm Three: Services</h3>
+<p class="text-on-surface-variant font-body-md">Holistic asset maintenance and property management solutions for a worry-free ownership experience.</p>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex gap-2 items-start"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> 360° Property Management</li>
+<li class="flex gap-2 items-start"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Letting &amp; Tenant Management</li>
+<li class="flex gap-2 items-start"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Renovation &amp; Design Advisory</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="bg-surface py-section-gap px-margin-mobile overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4 reveal-up">
+<div class="max-w-xl">
+<p class="font-label-caps text-label-caps text-secondary tracking-[0.3em] uppercase mb-4">What we offer</p>
+<h2 class="font-headline-xl text-headline-xl text-primary">An End-to-End Real Estate Platform.</h2>
+</div>
+<button class="font-button-text text-secondary border-b-2 border-secondary pb-1 flex items-center gap-2 group interactive-scale">
+                View All Services <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-gutter">
+<div class="bg-canvas-white p-6 border border-silver-metallic flex flex-col items-center text-center gap-4 reveal-up interactive-scale" style="transition-delay: 0.05s">
+<div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">sell</span>
+</div>
+<h4 class="font-label-caps text-label-caps">Buy &amp; Sell</h4>
+</div>
+<div class="bg-canvas-white p-6 border border-silver-metallic flex flex-col items-center text-center gap-4 reveal-up interactive-scale" style="transition-delay: 0.1s">
+<div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">key</span>
+</div>
+<h4 class="font-label-caps text-label-caps">Letting</h4>
+</div>
+<div class="bg-canvas-white p-6 border border-silver-metallic flex flex-col items-center text-center gap-4 reveal-up interactive-scale" style="transition-delay: 0.15s">
+<div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<h4 class="font-label-caps text-label-caps">Investment Guidance</h4>
+</div>
+<div class="bg-canvas-white p-6 border border-silver-metallic flex flex-col items-center text-center gap-4 reveal-up interactive-scale" style="transition-delay: 0.2s">
+<div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">home_repair_service</span>
+</div>
+<h4 class="font-label-caps text-label-caps">Property Management</h4>
+</div>
+<div class="bg-canvas-white p-6 border border-silver-metallic flex flex-col items-center text-center gap-4 reveal-up interactive-scale" style="transition-delay: 0.25s">
+<div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">handshake</span>
+</div>
+<h4 class="font-label-caps text-label-caps">Joint Development</h4>
+</div>
+<div class="bg-canvas-white p-6 border border-silver-metallic flex flex-col items-center text-center gap-4 reveal-up interactive-scale" style="transition-delay: 0.3s">
+<div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">public</span>
+</div>
+<h4 class="font-label-caps text-label-caps">NRI Advisory</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="px-margin-mobile max-w-container-max mx-auto my-12">
+<div class="relative bg-primary text-white p-12 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 reveal-up">
+<div class="absolute right-0 top-0 opacity-10">
+<span class="material-symbols-outlined text-[300px]" data-icon="trending_up">trending_up</span>
+</div>
+<div class="relative z-10 max-w-lg">
+<h3 class="font-headline-md text-headline-md mb-4 text-gold-light">Invest in Bangalore's Future</h3>
+<p class="font-body-md opacity-80 mb-6">Targeted opportunities in Grade-A commercial and luxury residential corridors. Historically delivering 15-18% p.a. returns for our managed portfolios.</p>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-gold-light">verified_user</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest">Institutional Compliance Guaranteed</span>
+</div>
+</div>
+<button class="relative z-10 bg-gold-light text-primary font-button-text px-10 py-5 interactive-scale hover:scale-105 glow-pulse">Download Investment Deck</button>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-section-gap px-margin-mobile">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1 reveal-up">
+<img class="w-full h-[500px] object-cover" data-alt="A macro shot of architectural blueprints." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQea_9ex_0ZKiTXRyl5UwwHuMsHijgrsAWePfYUkWywMI06FhGFkWcJT_zLLzjaEaDTGNSp4Klr8DQX0QOMuZVj-N1gCzxiWL-otCHSt20EUN0lujXsHqUDcZbF-akzT_7aPGd335wj754UpRvm5J5jKUPal_pVudeXETpW11Hi7hvNIzjQrJ6FFkdSCXdb9RjMYdlAtNC06IlMUYRwSVNT8RTGmWErCXCPCeJqFm8PoIR_UEu9pUwF092jNojwbZsIjJII3Ir1s6Q"/>
+</div>
+<div class="order-1 md:order-2 reveal-up" style="transition-delay: 0.2s">
+<p class="font-label-caps text-label-caps text-secondary tracking-[0.3em] uppercase mb-4">The Chronos Difference</p>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-12">Built on Principles of Architectural Precision.</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<span class="font-headline-md text-headline-md text-silver-metallic">01</span>
+<div>
+<h4 class="font-button-text text-primary mb-2">Deep Roots</h4>
+<p class="text-on-surface-variant font-body-md">Decades of navigating Bengaluru's complex land laws and emerging market trends.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="font-headline-md text-headline-md text-silver-metallic">02</span>
+<div>
+<h4 class="font-button-text text-primary mb-2">Absolute Transparency</h4>
+<p class="text-on-surface-variant font-body-md">Honest valuation and clear documentation. No hidden costs, no fine print surprises.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="font-headline-md text-headline-md text-silver-metallic">03</span>
+<div>
+<h4 class="font-button-text text-primary mb-2">White-Glove Service</h4>
+<p class="text-on-surface-variant font-body-md">Bespoke assistance from discovery to deed transfer. Dedicated relationship managers for every client.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="font-headline-md text-headline-md text-silver-metallic">04</span>
+<div>
+<h4 class="font-button-text text-primary mb-2">End-to-End Asset Management</h4>
+<p class="text-on-surface-variant font-body-md">We don't just sell and leave. We manage, grow, and optimize your assets for generations.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Philosophy Quote -->
+<section class="bg-primary text-white py-24 text-center px-margin-mobile">
+<div class="max-w-2xl mx-auto reveal-up">
+<span class="material-symbols-outlined text-6xl text-gold-light/40 mb-8" data-icon="format_quote">format_quote</span>
+<p class="font-headline-md text-headline-md italic mb-8">"Real estate is not just built on land. It is built on trust, time, and the right partner."</p>
+<div class="h-px w-24 bg-gold-light mx-auto mb-4"></div>
+<p class="font-label-caps text-label-caps tracking-widest text-gold-light">CHRONOS PHILOSOPHY</p>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-margin-mobile">
+<div class="max-w-container-max mx-auto border border-silver-metallic overflow-hidden reveal-up">
+<div class="grid grid-cols-1 md:grid-cols-2">
+<div class="p-12 md:p-16 flex flex-col justify-center">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-6">Let’s Discuss Your Next Move.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Whether you are looking to divest, invest, or manage—our team is ready to provide expert institutional guidance.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">mail</span>
+<span class="font-body-md">advisory@chronosproperties.in</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">call</span>
+<span class="font-body-md">+91 80 4920 0000</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<span class="font-body-md">Level 12, UB City, Vittal Mallya Road, Bengaluru</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-12 md:p-16">
+<form class="space-y-6">
+<div>
+<label class="font-label-caps text-label-caps text-primary block mb-2 uppercase">Full Name</label>
+<input class="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-secondary transition-colors" placeholder="Enter your name" type="text"/>
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-primary block mb-2 uppercase">Email Address</label>
+<input class="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-secondary transition-colors" placeholder="email@example.com" type="email"/>
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-primary block mb-2 uppercase">Interest</label>
+<select class="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-secondary transition-colors appearance-none interactive-scale cursor-pointer">
+<option>Investment Consultation</option>
+<option>Asset Management</option>
+<option>Joint Development</option>
+<option>Buying/Selling</option>
+</select>
+</div>
+<button class="w-full bg-primary text-white py-5 font-button-text uppercase tracking-widest mt-8 hover:bg-primary/90 transition-colors interactive-scale">Request Consultation</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Marquee -->
+<div class="py-8 bg-surface-container-low border-y border-silver-metallic">
+<div class="scrolling-text-container">
+<div class="scrolling-text inline-flex gap-16 font-headline-md text-headline-md text-primary opacity-20">
+<span>RESIDENTIAL PORTFOLIO</span>
+<span>COMMERCIAL ASSETS</span>
+<span>INVESTOR RELATIONS</span>
+<span>PROPERTY MANAGEMENT</span>
+<span>RESIDENTIAL PORTFOLIO</span>
+<span>COMMERCIAL ASSETS</span>
+<span>INVESTOR RELATIONS</span>
+<span>PROPERTY MANAGEMENT</span>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-deep-navy-dark border-t border-primary-container py-section-gap footer-reveal">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-gold-light text-headline-md" data-icon="domain">domain</span>
+<span class="font-headline-md text-headline-md text-gold-light uppercase tracking-tighter">CHRONOS</span>
+</div>
+<p class="text-silver-metallic opacity-70 font-body-md max-w-sm">Architectural Precision. Institutional Trust. Redefining the Bengaluru skyline through principled real estate practices.</p>
+</div>
+<div>
+<h5 class="text-gold-light font-label-caps text-label-caps mb-6">PORTFOLIO</h5>
+<ul class="flex flex-col gap-4 text-silver-metallic opacity-70 font-body-md">
+<li class="hover:text-gold-light transition-all hover:translate-x-1"><a class="block" href="#">Residential Portfolio</a></li>
+<li class="hover:text-gold-light transition-all hover:translate-x-1"><a class="block" href="#">Commercial Assets</a></li>
+<li class="hover:text-gold-light transition-all hover:translate-x-1"><a class="block" href="#">Investor Relations</a></li>
+<li class="hover:text-gold-light transition-all hover:translate-x-1"><a class="block" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-gold-light font-label-caps text-label-caps mb-6">LEGAL</h5>
+<ul class="flex flex-col gap-4 text-silver-metallic opacity-70 font-body-md">
+<li class="hover:text-gold-light transition-all hover:translate-x-1"><a class="block" href="#">Privacy Policy</a></li>
+<li class="hover:text-gold-light transition-all hover:translate-x-1"><a class="block" href="#">Terms of Service</a></li>
+<li class="hover:text-gold-light transition-all hover:translate-x-1"><a class="block" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-silver-metallic opacity-50 font-label-caps text-label-caps text-center">© 2024 Chronos Properties. Architectural Precision. Institutional Trust.</p>
+<div class="flex gap-6 text-silver-metallic opacity-50">
+<span class="material-symbols-outlined hover:text-gold-light cursor-pointer interactive-scale">social_leaderboard</span>
+<span class="material-symbols-outlined hover:text-gold-light cursor-pointer interactive-scale">alternate_email</span>
+<span class="material-symbols-outlined hover:text-gold-light cursor-pointer interactive-scale">share</span>
+</div>
+</div>
+</footer>
+<script>
+    // Intersection Observer for staggered reveals
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                // Optional: Stop observing after reveal
+                // observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal-up, .footer-reveal').forEach(el => observer.observe(el));
+
+    // Sticky header logic
+    let lastScroll = 0;
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll <= 10) {
+            nav.classList.remove('shadow-lg');
+            nav.style.transform = 'translateY(0)';
+            return;
+        }
+        
+        if (currentScroll > lastScroll && currentScroll > 100) {
+            // Scrolling down
+            nav.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling up
+            nav.style.transform = 'translateY(0)';
+            nav.classList.add('shadow-lg');
+        }
+        lastScroll = currentScroll;
+    });
+</script>
+</body></html>

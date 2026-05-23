@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Material Symbols ─────────────────────────────────── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* ─── Shimmer Button ────────────────────────────────────── */
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -150%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.12), transparent);
+  transform: rotate(45deg);
+  transition: left 0.7s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+.shimmer-btn:hover::after {
+  opacity: 1;
+  left: 100%;
+}
+
+/* ─── Glow Pulse ────────────────────────────────────────── */
+.glow-pulse {
+  animation: glow-pulse 2.4s infinite ease-in-out;
+}
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(220,192,138,0); }
+  50%       { box-shadow: 0 0 20px rgba(220,192,138,0.55); }
+}
+
+/* ─── Ken Burns / Hero Zoom ─────────────────────────────── */
+.ken-burns {
+  animation: ken-burns 22s ease-out forwards;
+}
+@keyframes ken-burns {
+  0%   { transform: scale(1); }
+  100% { transform: scale(1.15); }
+}
+
+/* ─── Hero Gradient Overlay ─────────────────────────────── */
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(8,18,38,0.35), rgba(8,18,38,0.72));
+}
+
+/* ─── Gold Accent Line ──────────────────────────────────── */
+.gold-accent-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #DCC08A, transparent);
+}
+
+/* ─── Scrolling Ticker ──────────────────────────────────── */
+.scrolling-text-container { overflow: hidden; white-space: nowrap; }
+.scrolling-text {
+  display: inline-block;
+  animation: scroll-left 30s linear infinite;
+}
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ─── Entrance Animation (blur-slide-up) ────────────────── */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(28px);
+  filter: blur(6px);
+  transition:
+    opacity   0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    filter    0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-up.active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* ─── Line Reveal ───────────────────────────────────────── */
+.line-reveal {
+  width: 0;
+  transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.line-reveal.active { width: 100%; }
+
+/* ─── Form Input Minimal ────────────────────────────────── */
+.form-input-minimal {
+  border: none;
+  border-bottom: 1px solid theme('colors.silver-metallic');
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.form-input-minimal:focus {
+  outline: none;
+  border-bottom-color: theme('colors.gold-light');
+  box-shadow: 0 3px 10px -4px rgba(220,192,138,0.25);
+}
+
+/* ─── Interactive Scale ─────────────────────────────────── */
+.interactive-scale { transition: transform 0.15s cubic-bezier(0.4,0,0.2,1); }
+.interactive-scale:active { transform: scale(0.96); }
+
+/* ─── Reduced Motion ────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+  .ken-burns,
+  .glow-pulse,
+  .scrolling-text {
+    animation: none !important;
+  }
+  .shimmer-btn::after { display: none; }
+  .line-reveal { width: 100% !important; transition: none !important; }
+}

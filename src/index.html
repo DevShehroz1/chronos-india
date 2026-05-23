@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chronos Properties | Architectural Excellence in Bengaluru</title>
+  <link rel="stylesheet" href="output.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-canvas-white text-on-surface font-body-md overflow-x-hidden selection:bg-gold-light selection:text-primary">
+
+<!-- ─── NAV ──────────────────────────────────────────────────── -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-canvas-white border-b border-silver-metallic shadow-sm transition-transform duration-300">
+  <nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto h-20">
+    <!-- Logo -->
+    <a href="index.html" class="font-headline-md text-headline-md text-primary uppercase tracking-tighter" aria-label="Chronos Properties home">
+      Chronos Properties
+    </a>
+    <!-- Desktop links -->
+    <div class="hidden md:flex items-center gap-10" role="navigation" aria-label="Primary">
+      <a href="#" class="relative font-body-md text-body-md tracking-wide text-primary font-bold after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-gold-light">Portfolio</a>
+      <a href="#" class="nav-link relative font-body-md text-body-md tracking-wide text-on-surface-variant hover:text-primary transition-colors duration-300 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-gold-light after:transition-[width] after:duration-300 hover:after:w-full">Services</a>
+      <a href="#" class="nav-link relative font-body-md text-body-md tracking-wide text-on-surface-variant hover:text-primary transition-colors duration-300 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-gold-light after:transition-[width] after:duration-300 hover:after:w-full">Advisory</a>
+      <a href="#" class="nav-link relative font-body-md text-body-md tracking-wide text-on-surface-variant hover:text-primary transition-colors duration-300 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-gold-light after:transition-[width] after:duration-300 hover:after:w-full">Insights</a>
+      <a href="#" class="nav-link relative font-body-md text-body-md tracking-wide text-on-surface-variant hover:text-primary transition-colors duration-300 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-gold-light after:transition-[width] after:duration-300 hover:after:w-full">About</a>
+    </div>
+    <!-- CTA -->
+    <a href="contact.html" class="hidden md:inline-flex shimmer-btn bg-primary text-on-primary px-8 py-3 font-button-text text-button-text uppercase tracking-widest hover:bg-gold-light hover:text-primary transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-light">
+      Enquire Now
+    </a>
+    <!-- Hamburger -->
+    <button id="nav-open" class="md:hidden text-primary interactive-scale p-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <span class="material-symbols-outlined text-3xl" aria-hidden="true">menu</span>
+    </button>
+  </nav>
+</header>
+
+<!-- ─── MOBILE DRAWER ─────────────────────────────────────────── -->
+<div id="drawer-overlay" class="fixed inset-0 bg-black/50 z-[60] opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
+<aside id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu"
+  class="fixed left-0 top-0 h-full w-80 z-[70] bg-canvas-white border-r border-silver-metallic -translate-x-full transition-transform duration-300 flex flex-col p-6 shadow-2xl">
+  <div class="flex justify-between items-center mb-10">
+    <span class="font-headline-md text-headline-md text-primary uppercase tracking-tighter">Chronos</span>
+    <button id="nav-close" class="interactive-scale focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light" aria-label="Close navigation menu">
+      <span class="material-symbols-outlined text-2xl" aria-hidden="true">close</span>
+    </button>
+  </div>
+  <nav class="flex flex-col gap-1" aria-label="Mobile primary">
+    <a href="#" class="flex items-center gap-4 p-4 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface rounded-lg transition-colors">
+      <span class="material-symbols-outlined text-gold-light" aria-hidden="true">home</span>Home
+    </a>
+    <a href="#" class="flex items-center gap-4 p-4 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface rounded-lg transition-colors">
+      <span class="material-symbols-outlined text-gold-light" aria-hidden="true">apartment</span>Portfolio
+    </a>
+    <a href="#" class="flex items-center gap-4 p-4 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface rounded-lg transition-colors">
+      <span class="material-symbols-outlined text-gold-light" aria-hidden="true">monetization_on</span>Investment
+    </a>
+    <a href="#" class="flex items-center gap-4 p-4 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface rounded-lg transition-colors">
+      <span class="material-symbols-outlined text-gold-light" aria-hidden="true">menu_book</span>Insights
+    </a>
+    <a href="contact.html" class="flex items-center gap-4 p-4 font-label-caps text-label-caps bg-primary text-on-primary rounded-lg mt-4 transition-colors hover:bg-primary-container">
+      <span class="material-symbols-outlined" aria-hidden="true">mail</span>Contact Us
+    </a>
+  </nav>
+</aside>
+
+<!-- ─── HERO ──────────────────────────────────────────────────── -->
+<section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden" aria-label="Hero">
+  <div class="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+    <img
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcyn58lPWuBj9X6skfkmTNJZNRBhoQ7DbOXylDRX1r5nNymRVV9c8UlJa8KdPs9Upfef9EPBcmFTewJlgen_gWhm8BJJh6DzbDcPaiVLXkT1CXtjteIIHakXPl1celzItO_aKM04DUgaMAXRlZMXZ9dzOCp645JeyzyTzAiMLXNGNjpacTtPYUX0hmS8jvdyLvuAyvegHS7uIcx-jMRedVyRzibHunfGpR8TBzSrL2dfm2Z5483tBHGcSfVZjOW6YlU1Y1csC7sBk0"
+      alt="Minimalist luxury architectural structure in Bengaluru at dusk — clean white lines and glass panels against a deep blue sky"
+      class="w-full h-full object-cover ken-burns"
+      width="2560" height="1600"
+    />
+    <div class="absolute inset-0 hero-overlay" aria-hidden="true"></div>
+  </div>
+
+  <div class="relative z-10 text-center text-on-primary max-w-4xl px-margin-mobile">
+    <p class="font-label-caps text-label-caps tracking-[0.3em] uppercase mb-6 text-gold-light opacity-90">Real Estate · Bengaluru</p>
+    <h1 id="hero-headline" class="font-display-lg text-display-lg-mobile md:text-[100px] leading-none mb-8 tracking-widest font-extralight italic" aria-label="Chronos">
+      <!-- words injected by JS for word-by-word animation -->
+    </h1>
+    <p class="reveal-up font-headline-md text-headline-md italic mb-12 opacity-80" style="--reveal-delay:0.6s">Built across time with trust.</p>
+    <div class="reveal-up flex flex-col sm:flex-row items-center justify-center gap-5" style="--reveal-delay:0.85s">
+      <a href="contact.html" class="shimmer-btn w-full sm:w-auto bg-gold-light text-primary px-10 py-5 font-button-text text-button-text uppercase tracking-widest font-bold hover:bg-on-primary hover:text-primary transition-all duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white glow-pulse">
+        Invest With Us
+      </a>
+      <a href="#services" class="w-full sm:w-auto border border-white/40 text-on-primary px-10 py-5 font-button-text text-button-text uppercase tracking-widest font-bold hover:bg-white/10 backdrop-blur-sm transition-all duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+        Our Services
+      </a>
+    </div>
+  </div>
+
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-on-primary/50 animate-bounce" aria-hidden="true">
+    <span class="material-symbols-outlined text-4xl">expand_more</span>
+  </div>
+</section>
+
+<!-- ─── STATS ──────────────────────────────────────────────────── -->
+<section class="bg-primary text-on-primary py-16 border-y border-gold-light/20" aria-label="Key figures">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+    <div class="space-y-2">
+      <p class="font-display-lg text-[40px] md:text-[48px] text-gold-light stat-number" data-target="3" aria-label="3 business arms">0</p>
+      <p class="font-label-caps text-label-caps opacity-60 uppercase">Business Arms</p>
+    </div>
+    <div class="space-y-2">
+      <p class="font-display-lg text-[40px] md:text-[48px] text-gold-light">
+        <span class="stat-number" data-target="6" aria-label="6 crore plus active portfolio">0</span>Cr+
+      </p>
+      <p class="font-label-caps text-label-caps opacity-60 uppercase">Active Portfolio</p>
+    </div>
+    <div class="space-y-2">
+      <p class="font-display-lg text-[40px] md:text-[48px] text-gold-light">BLR</p>
+      <p class="font-label-caps text-label-caps opacity-60 uppercase">Strategic Focus</p>
+    </div>
+    <div class="space-y-2">
+      <p class="font-display-lg text-[40px] md:text-[48px] text-gold-light">
+        <span class="stat-number" data-target="360" aria-label="360 degree service">0</span>°
+      </p>
+      <p class="font-label-caps text-label-caps opacity-60 uppercase">Bespoke Service</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TICKER ────────────────────────────────────────────────── -->
+<div class="bg-secondary text-white py-3 overflow-hidden border-y border-gold-light/20" aria-hidden="true">
+  <div class="scrolling-text-container">
+    <div class="scrolling-text inline-flex gap-12 font-label-caps text-label-caps tracking-widest uppercase items-center">
+      <span>Bengaluru, Karnataka</span><span class="w-1 h-1 rounded-full bg-white/60"></span>
+      <span>Joint Development</span><span class="w-1 h-1 rounded-full bg-white/60"></span>
+      <span>Premium Lettings</span><span class="w-1 h-1 rounded-full bg-white/60"></span>
+      <span>Institutional Trust</span><span class="w-1 h-1 rounded-full bg-white/60"></span>
+      <span>Bengaluru, Karnataka</span><span class="w-1 h-1 rounded-full bg-white/60"></span>
+      <span>Joint Development</span><span class="w-1 h-1 rounded-full bg-white/60"></span>
+      <span>Premium Lettings</span><span class="w-1 h-1 rounded-full bg-white/60"></span>
+      <span>Institutional Trust</span><span class="w-1 h-1 rounded-full bg-white/60"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── THREE ARMS ────────────────────────────────────────────── -->
+<section class="py-section-gap bg-surface" aria-labelledby="arms-heading">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="text-center mb-20 reveal-up">
+      <p class="font-label-caps text-label-caps text-secondary tracking-[0.3em] uppercase mb-4">Our Business</p>
+      <h2 id="arms-heading" class="font-headline-xl text-headline-xl italic mb-4">Three Arms. One Vision.</h2>
+      <div class="gold-accent-line mx-auto w-48 line-reveal"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter stagger-children">
+      <!-- Arm 1 -->
+      <article class="reveal-up bg-canvas-white p-10 md:p-12 border border-silver-metallic hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group">
+        <span class="material-symbols-outlined text-gold-light text-5xl mb-8 block group-hover:scale-110 transition-transform duration-300" aria-hidden="true">architecture</span>
+        <h3 class="font-headline-md text-headline-md mb-6">Property Development</h3>
+        <ul class="space-y-4 font-body-md text-on-surface-variant" role="list">
+          <li class="flex items-start gap-3"><span class="material-symbols-outlined text-gold-light text-sm mt-1 flex-shrink-0" aria-hidden="true">check_circle</span>Bespoke Architectural Design</li>
+          <li class="flex items-start gap-3"><span class="material-symbols-outlined text-gold-light text-sm mt-1 flex-shrink-0" aria-hidden="true">check_circle</span>High-Precision Construction</li>
+          <li class="flex items-start gap-3"><span class="material-symbols-outlined text-gold-light text-sm mt-1 flex-shrink-0" aria-hidden="true">check_circle</span>Sustainable Luxury Living</li>
+        </ul>
+      </article>
+      <!-- Arm 2 -->
+      <article class="reveal-up bg-canvas-white p-10 md:p-12 border border-silver-metallic hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group">
+        <span class="material-symbols-outlined text-gold-light text-5xl mb-8 block group-hover:scale-110 transition-transform duration-300" aria-hidden="true">handshake</span>
+        <h3 class="font-headline-md text-headline-md mb-6">Brokerage</h3>
+        <ul class="space-y-4 font-body-md text-on-surface-variant" role="list">
+          <li class="flex items-start gap-3"><span class="material-symbols-outlined text-gold-light text-sm mt-1 flex-shrink-0" aria-hidden="true">check_circle</span>Exclusive Off-Market Assets</li>
+          <li class="flex items-start gap-3"><span class="material-symbols-outlined text-gold-light text-sm mt-1 flex-shrink-0" aria-hidden="true">check_circle</span>Strategic Market Analysis</li>
+          <li class="flex items-start gap-3"><span class="material-symbols-outlined text-gold-light text-sm mt-1 flex-shrink-0" aria-hidden="true">check_circle</span>Seamless Transaction Flow</li>
+        </ul>
+      </article>
+      <!-- Arm 3 -->
+      <article class="reveal-up bg-canvas-white p-10 md:p-12 border border-silver-metallic hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group">
+        <span class="material-symbols-outlined text-gold-light text-5xl mb-8 block group-hover:scale-110 transition-transform duration-300" aria-hidden="true">real_estate_agent</span>
+        <h3 class="font-headline-md text-headline-md mb-6">Property Services</h3>
+        <ul class="space-y-4 font-body-md text-on-surface-variant" role="list">
+          <li class="flex items-start gap-3"><span class="material-symbols-outlined text-gold-light text-sm mt-1 flex-shrink-0" aria-hidden="true">check_circle</span>White-Glove Asset Management</li>
+          <li class="flex items-start gap-3"><span class="material-symbols-outlined text-gold-light text-sm mt-1 flex-shrink-0" aria-hidden="true">check_circle</span>Legal &amp; Regulatory Advisory</li>
+          <li class="flex items-start gap-3"><span class="material-symbols-outlined text-gold-light text-sm mt-1 flex-shrink-0" aria-hidden="true">check_circle</span>Maintenance &amp; Upkeep</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SERVICES GRID ─────────────────────────────────────────── -->
+<section id="services" class="py-section-gap bg-canvas-white" aria-labelledby="services-heading">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-20 gap-8 reveal-up">
+      <div class="max-w-2xl">
+        <p class="font-label-caps text-label-caps text-gold-light uppercase mb-4">Our Ecosystem</p>
+        <h2 id="services-heading" class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight">An End-to-End Platform for Modern Estates.</h2>
+      </div>
+      <a href="#" class="font-button-text text-button-text uppercase tracking-widest border-b border-primary pb-1 hover:text-gold-light hover:border-gold-light transition-colors whitespace-nowrap focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-light">
+        View All Services
+      </a>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-px bg-silver-metallic border border-silver-metallic stagger-children">
+      <div class="reveal-up bg-canvas-white p-8 md:p-12 hover:bg-surface transition-colors group">
+        <div class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center text-primary mb-6" aria-hidden="true">
+          <span class="material-symbols-outlined">sell</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md mb-4 text-[22px] md:text-headline-md">Buy &amp; Sell</h3>
+        <p class="font-body-md text-on-surface-variant mb-6 hidden md:block">Navigating the premium residential and commercial markets with unparalleled discretion and data-driven insight.</p>
+        <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" aria-hidden="true">arrow_forward</span>
+      </div>
+      <div class="reveal-up bg-canvas-white p-8 md:p-12 hover:bg-surface transition-colors group">
+        <div class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center text-primary mb-6" aria-hidden="true">
+          <span class="material-symbols-outlined">key</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md mb-4 text-[22px] md:text-headline-md">Letting &amp; Rentals</h3>
+        <p class="font-body-md text-on-surface-variant mb-6 hidden md:block">Connecting refined individuals with exceptional properties through a curated portfolio of Bangalore's finest spaces.</p>
+        <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" aria-hidden="true">arrow_forward</span>
+      </div>
+      <div class="reveal-up bg-canvas-white p-8 md:p-12 hover:bg-surface transition-colors group">
+        <div class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center text-primary mb-6" aria-hidden="true">
+          <span class="material-symbols-outlined">analytics</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md mb-4 text-[22px] md:text-headline-md">Investment Guidance</h3>
+        <p class="font-body-md text-on-surface-variant mb-6 hidden md:block">Strategic portfolio diversification through high-yield real estate opportunities and fractional ownership models.</p>
+        <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" aria-hidden="true">arrow_forward</span>
+      </div>
+      <div class="reveal-up bg-canvas-white p-8 md:p-12 hover:bg-surface transition-colors group">
+        <div class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center text-primary mb-6" aria-hidden="true">
+          <span class="material-symbols-outlined">home_repair_service</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md mb-4 text-[22px] md:text-headline-md">Property Management</h3>
+        <p class="font-body-md text-on-surface-variant mb-6 hidden md:block">Comprehensive care for your assets, from tenant relations to physical maintenance and fiscal reporting.</p>
+        <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" aria-hidden="true">arrow_forward</span>
+      </div>
+      <div class="reveal-up bg-canvas-white p-8 md:p-12 hover:bg-surface transition-colors group">
+        <div class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center text-primary mb-6" aria-hidden="true">
+          <span class="material-symbols-outlined">handshake</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md mb-4 text-[22px] md:text-headline-md">Joint Development</h3>
+        <p class="font-body-md text-on-surface-variant mb-6 hidden md:block">Unlocking land value through transparent partnership models and world-class architectural execution.</p>
+        <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" aria-hidden="true">arrow_forward</span>
+      </div>
+      <div class="reveal-up bg-canvas-white p-8 md:p-12 hover:bg-surface transition-colors group">
+        <div class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center text-primary mb-6" aria-hidden="true">
+          <span class="material-symbols-outlined">public</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md mb-4 text-[22px] md:text-headline-md">NRI Advisory</h3>
+        <p class="font-body-md text-on-surface-variant mb-6 hidden md:block">Specialized cross-border solutions including FEMA compliance, tax advisory, and remote asset oversight.</p>
+        <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" aria-hidden="true">arrow_forward</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA BANNER ────────────────────────────────────────────── -->
+<section class="py-section-gap bg-primary-container relative overflow-hidden" aria-labelledby="cta-heading">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div class="max-w-2xl text-on-primary">
+        <h2 id="cta-heading" class="reveal-up font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">Invest in Bangalore's Future.</h2>
+        <p class="reveal-up font-body-lg text-body-lg opacity-80 mb-8" style="--reveal-delay:0.15s">
+          Our exclusive investment vehicles consistently deliver 15–18% p.a. returns through strategic asset selection and development in the city's fastest-growing corridors.
+        </p>
+        <div class="reveal-up flex items-center gap-4 text-gold-light border-l-2 border-gold-light pl-6" style="--reveal-delay:0.3s">
+          <span class="material-symbols-outlined text-4xl" aria-hidden="true">trending_up</span>
+          <div>
+            <p class="font-label-caps text-label-caps uppercase opacity-60">Projected Returns</p>
+            <p class="font-headline-md text-headline-md">15 – 18% p.a.</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-up w-full lg:w-auto" style="--reveal-delay:0.45s">
+        <a href="contact.html" class="shimmer-btn block bg-gold-light text-primary px-12 md:px-16 py-5 md:py-6 font-button-text text-button-text uppercase tracking-widest font-extrabold hover:bg-white transition-all shadow-2xl text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+          Request Prospectus
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="absolute top-0 right-0 w-1/3 h-full bg-white opacity-[0.02] -skew-x-12 translate-x-1/2 pointer-events-none" aria-hidden="true"></div>
+</section>
+
+<!-- ─── WHY CHOOSE US ─────────────────────────────────────────── -->
+<section class="py-section-gap bg-canvas-white" aria-labelledby="why-heading">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+    <div class="lg:col-span-5">
+      <p class="font-label-caps text-label-caps text-gold-light uppercase mb-6 reveal-up">The Chronos Difference</p>
+      <h2 id="why-heading" class="font-headline-xl text-headline-xl mb-12 reveal-up" style="--reveal-delay:0.1s">Why sophisticated investors choose us.</h2>
+      <div class="space-y-10 stagger-children">
+        <div class="reveal-up flex gap-6">
+          <div class="flex-shrink-0 w-12 h-12 border border-gold-light/30 flex items-center justify-center" aria-hidden="true">
+            <span class="material-symbols-outlined text-gold-light">location_on</span>
+          </div>
+          <div>
+            <h3 class="font-body-lg text-body-lg font-bold mb-2 uppercase tracking-wide">Bengaluru Roots</h3>
+            <p class="font-body-md text-on-surface-variant">Deeply embedded in the local landscape with proprietary access to emerging real estate trends.</p>
+          </div>
+        </div>
+        <div class="reveal-up flex gap-6">
+          <div class="flex-shrink-0 w-12 h-12 border border-gold-light/30 flex items-center justify-center" aria-hidden="true">
+            <span class="material-symbols-outlined text-gold-light">visibility</span>
+          </div>
+          <div>
+            <h3 class="font-body-lg text-body-lg font-bold mb-2 uppercase tracking-wide">Institutional Transparency</h3>
+            <p class="font-body-md text-on-surface-variant">Corporate governance standards applied to every transaction, ensuring complete peace of mind.</p>
+          </div>
+        </div>
+        <div class="reveal-up flex gap-6">
+          <div class="flex-shrink-0 w-12 h-12 border border-gold-light/30 flex items-center justify-center" aria-hidden="true">
+            <span class="material-symbols-outlined text-gold-light">loyalty</span>
+          </div>
+          <div>
+            <h3 class="font-body-lg text-body-lg font-bold mb-2 uppercase tracking-wide">White-Glove Service</h3>
+            <p class="font-body-md text-on-surface-variant">Personalized advisory that anticipates your needs and manages your time as efficiently as your capital.</p>
+          </div>
+        </div>
+        <div class="reveal-up flex gap-6">
+          <div class="flex-shrink-0 w-12 h-12 border border-gold-light/30 flex items-center justify-center" aria-hidden="true">
+            <span class="material-symbols-outlined text-gold-light">all_inclusive</span>
+          </div>
+          <div>
+            <h3 class="font-body-lg text-body-lg font-bold mb-2 uppercase tracking-wide">End-to-End Expertise</h3>
+            <p class="font-body-md text-on-surface-variant">Eliminating friction by managing the entire property lifecycle within a single, trusted ecosystem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7 mt-16 lg:mt-0 relative">
+      <div class="aspect-[4/5] overflow-hidden reveal-up" style="--reveal-delay:0.2s">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOH4fYQKErE2YaDSjFODdaXxWguBDPtNTO19Cr29LuOvaEfqUp82KzVlQSH9-fgt4lLo7mMNV8V5Gj2qcxsjcX6IelPQJqRfl0HxWPhDkgUs_ocmIw1dg8FQiSIvugbViViRwLOk6DreclU9xfLSyB_DAyerV1A50rR4RsOLPqjzNRVgPNNmoDLyMfwj5QbK_E9bWu-rw-g8_0uQRsoAP1n9L1chN2YLR0CIyBGH8x0u7Awf1QOlnhrjGvW4RwkM4b4yjyuy9UnB1q"
+          alt="Modern architectural structure with bold geometric lines and large windows in natural light — elegant and minimalist, conveying luxury"
+          class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+          width="800" height="1000" loading="lazy"
+        />
+      </div>
+      <div class="reveal-up absolute -bottom-10 -left-6 md:-bottom-12 md:-left-12 w-1/2 aspect-video hidden md:block border-[10px] border-canvas-white shadow-xl" style="--reveal-delay:0.5s">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsIYhZq02ncadIuWcGyt-QkWT3i0oWG9etkdZ6DuTt7FO7AA7IWWeqayy1GXE1ObCJFA2YGxp1YdTiG9gw1Py7K4HcQWzsdpYou4FfAJ7uJbh6jFEqP5TKkfCaG2DLBdoF2PF455_GI1zqufH1JIKZfIlA2vwRJecWSLJBY1iy_O6N9u_bzrIsX-TX69K4bjxYaQBiCPFZ3_3GE4fnQqVORMd__yeiKEF5Pv3hI_nfH2jICZ2jY_PFg8CBpufYcfavuf-7KQfkr24j"
+          alt="Close-up of refined architectural materials — brushed steel, dark marble, and polished walnut highlighting Chronos's attention to detail"
+          class="w-full h-full object-cover"
+          width="600" height="337" loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── QUOTE ──────────────────────────────────────────────────── -->
+<section class="py-section-gap bg-primary text-white text-center" aria-label="Company philosophy">
+  <div class="max-w-4xl mx-auto px-margin-mobile">
+    <span class="material-symbols-outlined text-6xl text-gold-light/40 mb-8 block reveal-up" aria-hidden="true">format_quote</span>
+    <blockquote class="reveal-up font-display-lg text-display-lg-mobile md:text-display-lg italic leading-tight mb-8" style="--reveal-delay:0.15s">
+      "Real estate is not just built on land. It is built on trust, time, and the right partner."
+    </blockquote>
+    <div class="reveal-up gold-accent-line w-32 mx-auto mb-4 line-reveal" style="--reveal-delay:0.3s"></div>
+    <cite class="reveal-up block font-label-caps text-label-caps uppercase tracking-widest text-gold-light not-italic" style="--reveal-delay:0.45s">Institutional Philosophy, Chronos</cite>
+  </div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────────────────────────── -->
+<footer class="bg-surface-container-low text-on-surface py-section-gap border-t border-silver-metallic" aria-label="Site footer">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="md:col-span-1 space-y-8">
+      <div class="font-headline-md text-headline-md text-primary uppercase tracking-tighter">Chronos Properties</div>
+      <p class="font-body-md text-on-surface-variant max-w-xs">
+        Redefining the architectural landscape of Bengaluru through institutional integrity and bespoke craftsmanship.
+      </p>
+      <div class="flex gap-4">
+        <a href="#" class="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full border border-silver-metallic flex items-center justify-center hover:bg-gold-light hover:text-primary transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light" aria-label="Chronos Properties on LinkedIn">
+          <span class="material-symbols-outlined text-sm" aria-hidden="true">share</span>
+        </a>
+        <a href="mailto:concierge@chronos.properties" class="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full border border-silver-metallic flex items-center justify-center hover:bg-gold-light hover:text-primary transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light" aria-label="Email Chronos Properties">
+          <span class="material-symbols-outlined text-sm" aria-hidden="true">alternate_email</span>
+        </a>
+      </div>
+    </div>
+    <nav class="space-y-6" aria-label="Offerings">
+      <h2 class="font-label-caps text-label-caps uppercase tracking-widest font-bold">Offerings</h2>
+      <ul class="space-y-4 font-body-md" role="list">
+        <li><a href="#" class="text-on-surface-variant opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light">Residential Penthouses</a></li>
+        <li><a href="#" class="text-on-surface-variant opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light">Commercial Estates</a></li>
+        <li><a href="#" class="text-on-surface-variant opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light">Property Management</a></li>
+      </ul>
+    </nav>
+    <nav class="space-y-6" aria-label="Company">
+      <h2 class="font-label-caps text-label-caps uppercase tracking-widest font-bold">Company</h2>
+      <ul class="space-y-4 font-body-md" role="list">
+        <li><a href="#" class="text-on-surface-variant opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light">Corporate Governance</a></li>
+        <li><a href="#" class="text-on-surface-variant opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light">Privacy Policy</a></li>
+        <li><a href="#" class="text-on-surface-variant opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light">Terms of Service</a></li>
+      </ul>
+    </nav>
+    <div class="space-y-6">
+      <h2 class="font-label-caps text-label-caps uppercase tracking-widest font-bold">Contact</h2>
+      <address class="font-body-md text-on-surface-variant not-italic">
+        Level 12, UB City, Vittal Mallya Rd,<br />
+        Bengaluru, Karnataka 560001
+      </address>
+      <a href="mailto:concierge@chronos.properties" class="font-body-md text-primary font-semibold block hover:text-gold-light transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light">
+        concierge@chronos.properties
+      </a>
+    </div>
+  </div>
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-8 border-t border-silver-metallic/30 text-center">
+    <p class="font-label-caps text-label-caps text-on-surface-variant opacity-60 uppercase tracking-widest">
+      &copy; 2024 Chronos Properties. Architectural Excellence in Bengaluru.
+    </p>
+  </div>
+</footer>
+
+<script>
+// ─── Reduced-motion gate ────────────────────────────────────────
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// ─── Word-by-word hero headline ─────────────────────────────────
+(function () {
+  const el = document.getElementById('hero-headline');
+  const words = ['CHRONOS'];
+  el.innerHTML = words.map((w, i) =>
+    `<span class="word-anim inline-block opacity-0" style="--word-i:${i}">${w}</span>`
+  ).join(' ');
+
+  if (prefersReducedMotion) {
+    el.querySelectorAll('.word-anim').forEach(w => {
+      w.style.opacity = '1';
+    });
+    return;
+  }
+
+  el.querySelectorAll('.word-anim').forEach((w, i) => {
+    setTimeout(() => {
+      w.style.transition = 'opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1), filter 0.6s cubic-bezier(0.16,1,0.3,1)';
+      w.style.transform = 'translateY(20px)';
+      w.style.filter = 'blur(8px)';
+      w.offsetHeight; // force reflow
+      requestAnimationFrame(() => {
+        w.style.opacity = '1';
+        w.style.transform = 'translateY(0)';
+        w.style.filter = 'blur(0)';
+      });
+    }, i * 120);
+  });
+})();
+
+// ─── Intersection observer — reveal-up + line-reveal ───────────
+if (!prefersReducedMotion) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const delay = el.style.getPropertyValue('--reveal-delay') || '0s';
+      el.style.transitionDelay = delay;
+      el.classList.add('active');
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal-up, .line-reveal').forEach(el => observer.observe(el));
+
+  // stagger-children: stagger each .reveal-up child
+  document.querySelectorAll('.stagger-children').forEach(parent => {
+    parent.querySelectorAll(':scope > .reveal-up').forEach((child, i) => {
+      child.style.setProperty('--reveal-delay', `${i * 0.1}s`);
+    });
+  });
+} else {
+  document.querySelectorAll('.reveal-up').forEach(el => el.classList.add('active'));
+  document.querySelectorAll('.line-reveal').forEach(el => el.classList.add('active'));
+}
+
+// ─── Stats counter ──────────────────────────────────────────────
+if (!prefersReducedMotion) {
+  const counterObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.target, 10);
+      const duration = 1200;
+      const step = target / (duration / 16);
+      let current = 0;
+      const tick = () => {
+        current = Math.min(current + step, target);
+        el.textContent = Math.ceil(current);
+        if (current < target) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      counterObs.unobserve(el);
+    });
+  }, { threshold: 0.8 });
+  document.querySelectorAll('.stat-number').forEach(el => counterObs.observe(el));
+} else {
+  document.querySelectorAll('.stat-number').forEach(el => {
+    el.textContent = el.dataset.target;
+  });
+}
+
+// ─── Nav hide-on-scroll ─────────────────────────────────────────
+(function () {
+  const header = document.getElementById('site-header');
+  let lastY = 0;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y > lastY && y > 120) {
+      header.style.transform = 'translateY(-100%)';
+    } else {
+      header.style.transform = 'translateY(0)';
+    }
+    lastY = y;
+  }, { passive: true });
+})();
+
+// ─── Mobile drawer ──────────────────────────────────────────────
+(function () {
+  const drawer  = document.getElementById('mobile-drawer');
+  const overlay = document.getElementById('drawer-overlay');
+  const openBtn = document.getElementById('nav-open');
+  const closeBtn = document.getElementById('nav-close');
+  let focusableEls, firstEl, lastEl;
+
+  const open = () => {
+    drawer.classList.remove('-translate-x-full');
+    overlay.classList.remove('opacity-0', 'pointer-events-none');
+    overlay.setAttribute('aria-hidden', 'false');
+    openBtn.setAttribute('aria-expanded', 'true');
+    focusableEls = Array.from(drawer.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])'));
+    firstEl = focusableEls[0];
+    lastEl  = focusableEls[focusableEls.length - 1];
+    firstEl?.focus();
+    document.addEventListener('keydown', trapFocus);
+  };
+
+  const close = () => {
+    drawer.classList.add('-translate-x-full');
+    overlay.classList.add('opacity-0', 'pointer-events-none');
+    overlay.setAttribute('aria-hidden', 'true');
+    openBtn.setAttribute('aria-expanded', 'false');
+    document.removeEventListener('keydown', trapFocus);
+    openBtn.focus();
+  };
+
+  const trapFocus = (e) => {
+    if (e.key === 'Escape') { close(); return; }
+    if (e.key !== 'Tab') return;
+    if (e.shiftKey) {
+      if (document.activeElement === firstEl) { e.preventDefault(); lastEl.focus(); }
+    } else {
+      if (document.activeElement === lastEl) { e.preventDefault(); firstEl.focus(); }
+    }
+  };
+
+  openBtn.addEventListener('click', open);
+  closeBtn.addEventListener('click', close);
+  overlay.addEventListener('click', close);
+})();
+</script>
+</body>
+</html>

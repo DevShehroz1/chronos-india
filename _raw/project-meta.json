@@ -1,0 +1,337 @@
+{
+  "name": "projects/17924051030492625503",
+  "title": "Chronos Real Estate Platform",
+  "visibility": "PRIVATE",
+  "createTime": "2026-05-23T11:07:18.583384Z",
+  "updateTime": "2026-05-23T11:26:59.679947Z",
+  "projectType": "TEXT_TO_UI_PRO",
+  "thumbnailScreenshot": {
+    "name": "projects/17924051030492625503/files/b0e50f38d9774078ace51bd70cfb43c4",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ug54hQnNY8Fv23cAafvNKP6hmxhdYy5lp3a9UFuUo0VkaxPemtdBeybV1UOrDiJxTqb4HyWu45_gfd8vGdqlxokQjxmBmpmpDX2maatB0yxICkce6aXLza03H6KR8TsJfyYBcWesNpvsXlZA7QADDdo_eGX3sky9CleI56wBLlzkmqrgWi4w9_LYhbrSFeHX4hSRAfaPxJBBji_FmLyZy-2jdvrjPkFgVy81-uwK7cjcIiJY8v4L75jxzv9"
+  },
+  "origin": "STITCH",
+  "deviceType": "MOBILE",
+  "designTheme": {
+    "colorMode": "LIGHT",
+    "font": "EB_GARAMOND",
+    "customColor": "#0f2041",
+    "headlineFont": "EB_GARAMOND",
+    "bodyFont": "MANROPE",
+    "labelFont": "MANROPE",
+    "namedColors": {
+      "background": "#f8f9ff",
+      "canvas-white": "#FFFFFF",
+      "deep-navy-dark": "#081226",
+      "error": "#ba1a1a",
+      "error_container": "#ffdad6",
+      "gold-light": "#DCC08A",
+      "inverse_on_surface": "#eaf1ff",
+      "inverse_primary": "#b6c6f0",
+      "inverse_surface": "#213145",
+      "on_background": "#0b1c30",
+      "on_error": "#ffffff",
+      "on_error_container": "#93000a",
+      "on_primary": "#ffffff",
+      "on_primary_container": "#7988af",
+      "on_primary_fixed": "#081a3b",
+      "on_primary_fixed_variant": "#374669",
+      "on_secondary": "#ffffff",
+      "on_secondary_container": "#78580e",
+      "on_secondary_fixed": "#271900",
+      "on_secondary_fixed_variant": "#5e4200",
+      "on_surface": "#0b1c30",
+      "on_surface_variant": "#45464e",
+      "on_tertiary": "#ffffff",
+      "on_tertiary_container": "#ac7f59",
+      "on_tertiary_fixed": "#2e1500",
+      "on_tertiary_fixed_variant": "#623f1e",
+      "outline": "#75777f",
+      "outline_variant": "#c5c6cf",
+      "primary": "#000921",
+      "primary_container": "#0f2041",
+      "primary_fixed": "#d9e2ff",
+      "primary_fixed_dim": "#b6c6f0",
+      "secondary": "#7a590f",
+      "secondary_container": "#fed17d",
+      "secondary_fixed": "#ffdea6",
+      "secondary_fixed_dim": "#ecc06e",
+      "silver-metallic": "#E2E8F0",
+      "surface": "#f8f9ff",
+      "surface_bright": "#f8f9ff",
+      "surface_container": "#e5eeff",
+      "surface_container_high": "#dce9ff",
+      "surface_container_highest": "#d3e4fe",
+      "surface_container_low": "#eff4ff",
+      "surface_container_lowest": "#ffffff",
+      "surface_dim": "#cbdbf5",
+      "surface_tint": "#4f5e82",
+      "surface_variant": "#d3e4fe",
+      "tertiary": "#150700",
+      "tertiary_container": "#361a00",
+      "tertiary_fixed": "#ffdcc1",
+      "tertiary_fixed_dim": "#f0bc92"
+    },
+    "designMd": "---\nname: Midnight Gold Architectural System\ncolors:\n  surface: '#f8f9ff'\n  surface-dim: '#cbdbf5'\n  surface-bright: '#f8f9ff'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#eff4ff'\n  surface-container: '#e5eeff'\n  surface-container-high: '#dce9ff'\n  surface-container-highest: '#d3e4fe'\n  on-surface: '#0b1c30'\n  on-surface-variant: '#45464e'\n  inverse-surface: '#213145'\n  inverse-on-surface: '#eaf1ff'\n  outline: '#75777f'\n  outline-variant: '#c5c6cf'\n  surface-tint: '#4f5e82'\n  primary: '#000921'\n  on-primary: '#ffffff'\n  primary-container: '#0f2041'\n  on-primary-container: '#7988af'\n  inverse-primary: '#b6c6f0'\n  secondary: '#7a590f'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed17d'\n  on-secondary-container: '#78580e'\n  tertiary: '#150700'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#361a00'\n  on-tertiary-container: '#ac7f59'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d9e2ff'\n  primary-fixed-dim: '#b6c6f0'\n  on-primary-fixed: '#081a3b'\n  on-primary-fixed-variant: '#374669'\n  secondary-fixed: '#ffdea6'\n  secondary-fixed-dim: '#ecc06e'\n  on-secondary-fixed: '#271900'\n  on-secondary-fixed-variant: '#5e4200'\n  tertiary-fixed: '#ffdcc1'\n  tertiary-fixed-dim: '#f0bc92'\n  on-tertiary-fixed: '#2e1500'\n  on-tertiary-fixed-variant: '#623f1e'\n  background: '#f8f9ff'\n  on-background: '#0b1c30'\n  surface-variant: '#d3e4fe'\n  canvas-white: '#FFFFFF'\n  silver-metallic: '#E2E8F0'\n  deep-navy-dark: '#081226'\n  gold-light: '#DCC08A'\ntypography:\n  display-lg:\n    fontFamily: ebGaramond\n    fontSize: 64px\n    fontWeight: '500'\n    lineHeight: 72px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: ebGaramond\n    fontSize: 40px\n    fontWeight: '500'\n    lineHeight: 48px\n  headline-xl:\n    fontFamily: ebGaramond\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 56px\n  headline-md:\n    fontFamily: ebGaramond\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: manrope\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: manrope\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: manrope\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.1em\n  button-text:\n    fontFamily: manrope\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\nspacing:\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is crafted to evoke a sense of permanence, architectural precision, and institutional trust. It serves a high-end real estate market in Bengaluru, where tradition meets rapid modernization. The aesthetic is **Minimalist but Rich**, prioritizing clarity and high-quality imagery over decorative clutter. \n\nThe style combines the structural integrity of **Corporate Modernism** with the warmth of **Minimalist Luxury**. We utilize generous white space to signify exclusivity\u2014mimicking the airy, open layouts of premium villas and penthouses. Visual interest is generated through high-contrast typography and intentional metallic accents that guide the user\u2019s eye toward primary actions.\n\n## Colors\n\nThis design system utilizes a high-contrast palette to establish immediate authority. \n\n*   **Primary (Deep Midnight Blue):** Used for text, navigation bars, and structural containers to establish trust and grounding.\n*   **Accent (Refined Gold):** Applied sparingly to interactive elements, call-to-actions, and highlights to signify excellence and premium status.\n*   **Neutrals:** A range of subtle greys and \"silver metallics\" provide soft transitions between the deep blues and the stark white background.\n*   **Canvas:** The primary background is pure white to maximize the impact of architectural photography and maintain a clean, spacious feel.\n\n## Typography\n\nThe typographic strategy balances **EB Garamond** for a timeless, academic feel with **Manrope** for modern legibility.\n\n*   **Headlines:** Utilize EB Garamond for all display and headline levels. It should be used to tell the \"story\" of the property.\n*   **Body Text:** Manrope provides a clean, neutral counterpoint that ensures data\u2014such as square footage or pricing\u2014is communicated with clinical efficiency.\n*   **Hierarchy:** Use the `label-caps` style for section headers and small metadata to maintain a structured, institutional feel.\n\n## Layout & Spacing\n\nThis design system follows a **Fixed Grid** philosophy for desktop to maintain a gallery-like structure, transitioning to a fluid model for mobile.\n\n*   **Desktop:** A 12-column grid with 24px gutters. Use large margins (64px+) to prevent content from feeling crowded.\n*   **Sectioning:** Use aggressive vertical spacing (`section-gap`) to separate distinct property narratives or services.\n*   **Alignment:** Elements should feel \"hung\" from the grid, with a strong preference for left-aligned text to mirror editorial layouts.\n\n## Elevation & Depth\n\nTo maintain a \"sharp\" and professional feel, depth is conveyed through **Low-contrast Outlines** and **Ambient Shadows** rather than heavy gradients.\n\n*   **Surface Layers:** Use very light grey backgrounds (`#F8F9FA`) to distinguish secondary content blocks from the main white canvas.\n*   **Shadows:** Shadows should be nearly invisible\u2014high blur (32px+), low opacity (4-8%), and slightly tinted with the Primary Blue to ensure they feel integrated into the environment.\n*   **Borders:** Use thin, 1px borders in `silver-metallic` for cards and input fields to define structure without adding visual weight.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px)**. This choice mirrors high-end architectural lines and reinforces the \"institutional\" and \"stable\" brand personality. \n\n*   **Buttons & Inputs:** Must always be rectangular with 90-degree corners.\n*   **Images:** Photography should never have rounded corners; it should appear as if it is \"mounted\" on the page.\n*   **Accents:** Gold highlights should appear as thin horizontal or vertical lines to emphasize the grid.\n\n## Components\n\n### Buttons\n*   **Primary:** Solid `Primary Blue` background with White text. Sharp corners.\n*   **Accent:** Solid `Refined Gold` background with `Primary Blue` text for high-importance conversion points.\n*   **Ghost:** Transparent background with a 1px `Refined Gold` border.\n\n### Cards\n*   Cards use a white background with a 1px `silver-metallic` border. \n*   On hover, a very subtle ambient shadow is applied to suggest \"lift\" without softening the sharp edges.\n\n### Inputs\n*   Bottom-border only (minimalist style) or full 1px border.\n*   Labels use the `label-caps` typography style placed above the field.\n\n### Photography\n*   Architectural photography should be full-bleed or large-scale.\n*   Use a subtle \"Midnight Blue\" overlay (10-20% opacity) on hero images to ensure white text remains legible while keeping the brand's color presence.",
+    "colorVariant": "FIDELITY",
+    "overridePrimaryColor": "#0f2041",
+    "overrideSecondaryColor": "#c9a052",
+    "overrideNeutralColor": "#64748b",
+    "spacingScale": 2,
+    "typography": {
+      "body-lg": {
+        "fontFamily": "manrope",
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "lineHeight": "28px"
+      },
+      "body-md": {
+        "fontFamily": "manrope",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "24px"
+      },
+      "button-text": {
+        "fontFamily": "manrope",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "lineHeight": "20px"
+      },
+      "display-lg": {
+        "fontFamily": "ebGaramond",
+        "fontSize": "64px",
+        "fontWeight": "500",
+        "lineHeight": "72px",
+        "letterSpacing": "-0.02em"
+      },
+      "display-lg-mobile": {
+        "fontFamily": "ebGaramond",
+        "fontSize": "40px",
+        "fontWeight": "500",
+        "lineHeight": "48px"
+      },
+      "headline-md": {
+        "fontFamily": "ebGaramond",
+        "fontSize": "32px",
+        "fontWeight": "400",
+        "lineHeight": "40px"
+      },
+      "headline-xl": {
+        "fontFamily": "ebGaramond",
+        "fontSize": "48px",
+        "fontWeight": "400",
+        "lineHeight": "56px"
+      },
+      "label-caps": {
+        "fontFamily": "manrope",
+        "fontSize": "12px",
+        "fontWeight": "600",
+        "lineHeight": "16px",
+        "letterSpacing": "0.1em"
+      }
+    },
+    "spacing": {
+      "container-max": "1280px",
+      "gutter": "24px",
+      "margin-desktop": "64px",
+      "margin-mobile": "16px",
+      "section-gap": "120px"
+    },
+    "headlineFontFamily": "Eb Garamond",
+    "bodyFontFamily": "Manrope",
+    "labelFontFamily": "Manrope"
+  },
+  "screenInstances": [
+    {
+      "id": "21d7e26e97bf479892d3031e0b1c905f",
+      "sourceScreen": "projects/17924051030492625503/screens/21d7e26e97bf479892d3031e0b1c905f",
+      "x": 13924,
+      "y": 15722,
+      "width": 600,
+      "height": 600
+    },
+    {
+      "id": "23167e0ab08f4dff86b7866186906a6e",
+      "sourceScreen": "projects/17924051030492625503/screens/23167e0ab08f4dff86b7866186906a6e",
+      "x": 13348,
+      "y": 15722,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "236ec16122e64011a5032498106792ee",
+      "sourceScreen": "projects/17924051030492625503/screens/236ec16122e64011a5032498106792ee",
+      "x": 12772,
+      "y": 15722,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "2f46d460d22f451197c22e1dd8ee74d3",
+      "sourceScreen": "projects/17924051030492625503/screens/2f46d460d22f451197c22e1dd8ee74d3",
+      "x": 7588,
+      "y": 15722,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "357e5c6eb4ca4bf6a70c2c9cd4d540f1",
+      "sourceScreen": "projects/17924051030492625503/screens/357e5c6eb4ca4bf6a70c2c9cd4d540f1",
+      "x": 3037,
+      "y": -147,
+      "width": 1280,
+      "height": 6109
+    },
+    {
+      "id": "3ce908b6f1264e71b8afa6015e2f5959",
+      "sourceScreen": "projects/17924051030492625503/screens/3ce908b6f1264e71b8afa6015e2f5959",
+      "x": 1478,
+      "width": 390,
+      "height": 3278
+    },
+    {
+      "id": "443c8b1281e4430ab8f124de9594c1e3",
+      "sourceScreen": "projects/17924051030492625503/screens/443c8b1281e4430ab8f124de9594c1e3",
+      "x": 12196,
+      "y": 15722,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "578a1b36a16445bd9a1565e47bd36f22",
+      "sourceScreen": "projects/17924051030492625503/screens/578a1b36a16445bd9a1565e47bd36f22",
+      "x": 9892,
+      "y": 15722,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "6ed365e8-0c25-4d0f-9bfe-7180a8c7cc8a",
+      "sourceScreen": "projects/17924051030492625503/screens/972741303195928001",
+      "y": 24895,
+      "width": 512,
+      "height": 82,
+      "type": "SCREEN_INSTANCE"
+    },
+    {
+      "id": "7385eb2c46544af38e10de0ee94aed53",
+      "sourceScreen": "projects/17924051030492625503/screens/7385eb2c46544af38e10de0ee94aed53",
+      "x": 1798,
+      "y": 15722,
+      "width": 1280,
+      "height": 6070
+    },
+    {
+      "id": "781471d32a484148b379342340e5127c",
+      "sourceScreen": "projects/17924051030492625503/screens/781471d32a484148b379342340e5127c",
+      "x": 11044,
+      "y": 15722,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "809091cac80d4bfabce370627ef90b35",
+      "sourceScreen": "projects/17924051030492625503/screens/809091cac80d4bfabce370627ef90b35",
+      "x": 8164,
+      "y": 15722,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "9ece15b1e09c48748c811ae626dd8658",
+      "sourceScreen": "projects/17924051030492625503/screens/9ece15b1e09c48748c811ae626dd8658",
+      "x": 11620,
+      "y": 15722,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "a6c8bd382ad342cfbbd34221a97c01eb",
+      "sourceScreen": "projects/17924051030492625503/screens/a6c8bd382ad342cfbbd34221a97c01eb",
+      "x": 3142,
+      "y": 15722,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "assets-6f11cc31cebc4105bc458bea00292bc0-1779535402389",
+      "x": 3718,
+      "y": 15722,
+      "width": 960,
+      "height": 540,
+      "sourceAsset": "assets/6f11cc31cebc4105bc458bea00292bc0",
+      "type": "DESIGN_SYSTEM_INSTANCE"
+    },
+    {
+      "id": "assets-80d2085cdfa245468fbafd1fdc956352-1779534472743",
+      "width": 960,
+      "height": 540,
+      "sourceAsset": "assets/80d2085cdfa245468fbafd1fdc956352",
+      "type": "DESIGN_SYSTEM_INSTANCE"
+    },
+    {
+      "id": "c1dba12bea95477ca904a534914fd5f1",
+      "sourceScreen": "projects/17924051030492625503/screens/c1dba12bea95477ca904a534914fd5f1",
+      "x": 5568,
+      "y": -121,
+      "width": 1280,
+      "height": 2470
+    },
+    {
+      "id": "c759dc4395b94ec98e474bb99e0ac49d",
+      "sourceScreen": "projects/17924051030492625503/screens/c759dc4395b94ec98e474bb99e0ac49d",
+      "x": 7012,
+      "y": 15722,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "c98784e4d9a34e1fb0e2b5082ea11f9f",
+      "sourceScreen": "projects/17924051030492625503/screens/c98784e4d9a34e1fb0e2b5082ea11f9f",
+      "x": 454,
+      "y": 15722,
+      "width": 1280,
+      "height": 2333
+    },
+    {
+      "id": "d1153cc33dad47b6bd5afd815a069cbd",
+      "sourceScreen": "projects/17924051030492625503/screens/d1153cc33dad47b6bd5afd815a069cbd",
+      "x": 9316,
+      "y": 15722,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "dc30fda8750f412f984fa8d89c6fd881",
+      "sourceScreen": "projects/17924051030492625503/screens/dc30fda8750f412f984fa8d89c6fd881",
+      "x": 10468,
+      "y": 15722,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "f33b01961d8341d7b6ff7c075ac82664",
+      "sourceScreen": "projects/17924051030492625503/screens/f33b01961d8341d7b6ff7c075ac82664",
+      "x": 1024,
+      "width": 390,
+      "height": 9101
+    },
+    {
+      "id": "fa7a5e4d6c4c4b979aca145afdee38ba",
+      "sourceScreen": "projects/17924051030492625503/screens/fa7a5e4d6c4c4b979aca145afdee38ba",
+      "x": 8740,
+      "y": 15722,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "ff2dd24966bb48e291303e9c1798cba9",
+      "sourceScreen": "projects/17924051030492625503/screens/ff2dd24966bb48e291303e9c1798cba9",
+      "y": 15722,
+      "width": 390,
+      "height": 8917
+    }
+  ],
+  "metadata": {
+    "userRole": "OWNER"
+  }
+}

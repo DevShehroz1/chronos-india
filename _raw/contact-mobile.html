@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "silver-metallic": "#E2E8F0",
+                        "tertiary": "#150700",
+                        "background": "#f8f9ff",
+                        "secondary-container": "#fed17d",
+                        "gold-light": "#DCC08A",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#b6c6f0",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#c5c6cf",
+                        "on-surface": "#0b1c30",
+                        "surface-container": "#e5eeff",
+                        "secondary-fixed-dim": "#ecc06e",
+                        "on-primary-fixed": "#081a3b",
+                        "secondary-fixed": "#ffdea6",
+                        "primary-container": "#0f2041",
+                        "on-tertiary-fixed-variant": "#623f1e",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-error": "#ffffff",
+                        "outline": "#75777f",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container-low": "#eff4ff",
+                        "on-primary-fixed-variant": "#374669",
+                        "inverse-on-surface": "#eaf1ff",
+                        "surface-variant": "#d3e4fe",
+                        "on-background": "#0b1c30",
+                        "inverse-primary": "#b6c6f0",
+                        "surface-bright": "#f8f9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#213145",
+                        "primary": "#000921",
+                        "on-surface-variant": "#45464e",
+                        "secondary": "#7a590f",
+                        "on-tertiary-container": "#ac7f59",
+                        "tertiary-fixed": "#ffdcc1",
+                        "primary-fixed": "#d9e2ff",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#4f5e82",
+                        "canvas-white": "#FFFFFF",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "deep-navy-dark": "#081226",
+                        "tertiary-container": "#361a00",
+                        "surface": "#f8f9ff",
+                        "on-secondary-container": "#78580e",
+                        "surface-container-high": "#dce9ff",
+                        "on-tertiary-fixed": "#2e1500",
+                        "on-primary-container": "#7988af",
+                        "tertiary-fixed-dim": "#f0bc92",
+                        "on-secondary-fixed": "#271900",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "section-gap": "120px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Manrope"],
+                        "button-text": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "headline-xl": ["EB Garamond"],
+                        "body-lg": ["Manrope"],
+                        "headline-md": ["EB Garamond"],
+                        "display-lg-mobile": ["EB Garamond"],
+                        "display-lg": ["EB Garamond"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "button-text": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "fontWeight": "500"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-canvas-white text-on-surface font-body-md overflow-x-hidden">
+<!-- Top AppBar (from JSON) -->
+<header class="bg-canvas-white dark:bg-primary border-b border-silver-metallic dark:border-primary-container shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary dark:text-gold-light" data-icon="domain">domain</span>
+<h1 class="font-headline-md text-headline-md text-primary dark:text-gold-light tracking-tight">Chronos Properties</h1>
+</div>
+<button class="hidden md:block font-label-caps text-label-caps text-primary border border-primary px-6 py-2 hover:bg-primary hover:text-white transition-all">Invest With Us</button>
+<button class="md:hidden" id="drawer-toggle">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<!-- Mobile Navigation Drawer Overlay -->
+<div class="fixed inset-0 bg-black/50 z-[60] opacity-0 pointer-events-none transition-opacity duration-300" id="drawer-overlay"></div>
+<aside class="bg-surface-container-lowest dark:bg-deep-navy-dark h-full w-80 fixed left-0 top-0 z-[70] -translate-x-full transition-transform duration-300 border-r border-silver-metallic dark:border-primary-container flex flex-col gap-4 p-6 shadow-xl" id="nav-drawer">
+<div class="flex justify-between items-center mb-8">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-gold-light">CHRONOS</h2>
+<button id="drawer-close"><span class="material-symbols-outlined" data-icon="close">close</span></button>
+</div>
+<nav class="space-y-2">
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-colors font-label-caps text-label-caps" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span> Home
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-colors font-label-caps text-label-caps" href="#">
+<span class="material-symbols-outlined" data-icon="apartment">apartment</span> Portfolio
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-colors font-label-caps text-label-caps" href="#">
+<span class="material-symbols-outlined" data-icon="monetization_on">monetization_on</span> Investment
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-colors font-label-caps text-label-caps" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span> Insights
+            </a>
+<a class="flex items-center gap-4 p-4 bg-secondary-container text-on-secondary-container rounded-lg font-bold font-label-caps text-label-caps" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span> Contact
+            </a>
+</nav>
+</aside>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="relative h-[353px] md:h-[442px] flex items-center bg-primary overflow-hidden">
+<div class="absolute inset-0 opacity-40">
+<img class="w-full h-full object-cover" data-alt="A grand architectural detail of a modern skyscraper in Bengaluru at dusk, showing sleek glass surfaces and structural steel beams. The lighting is low-key and professional, with a cool midnight blue and warm gold palette. The image conveys institutional trust and architectural precision through its minimalist yet rich composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABacIr5a454TDm-x8XQpZOQzbJPEBx3qQXHOBJuocMMbkU2dflNe7wJ3mW10bc98aoIBOrFEpAgwVM6IJ-1xwEZKnig_WRhAzBGhCYg1ssCT_vImns5YY2lYhhynuYtgUYV5uU3VM4cBz7yPIUPEVcSumTPS_3VqUlSivN1uglOKmdeRu3yTRp22FuM8NQWzDHBAfjYgQ_VRQ6HOVbfq3xsI0NN3pHYDCz4GLwHAjZN4RD84oSaCl6R3q3dd33JFNAZ2JaSk6dsKHV"/>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<p class="font-label-caps text-label-caps text-gold-light mb-4 tracking-widest uppercase">Get in touch</p>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-canvas-white leading-tight">Let's Build Something Lasting</h2>
+</div>
+</section>
+<!-- Main Content -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Contact Info Sidebar -->
+<div class="lg:col-span-4 space-y-12">
+<div class="space-y-6">
+<h3 class="font-headline-md text-headline-md text-primary border-l-4 border-gold-light pl-6">Office Presence</h3>
+<div class="space-y-4">
+<div>
+<p class="font-label-caps text-label-caps text-primary opacity-60 mb-1">COMPANY</p>
+<p class="text-body-lg font-body-lg text-primary font-semibold">Chronos Properties Institutional Pvt Ltd</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-primary opacity-60 mb-1">ADDRESS</p>
+<p class="text-body-md font-body-md text-on-surface-variant">Level 7, Prestige Trade Tower,<br/>Palace Road, High Grounds,<br/>Bengaluru, Karnataka 560001</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+<div>
+<p class="font-label-caps text-label-caps text-primary opacity-60 mb-1">EMAIL</p>
+<a class="text-body-md font-body-md text-primary hover:text-gold-light transition-colors underline decoration-gold-light underline-offset-4" href="mailto:concierge@chronos.in">concierge@chronos.in</a>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-primary opacity-60 mb-1">PHONE</p>
+<a class="text-body-md font-body-md text-primary hover:text-gold-light transition-colors" href="tel:+918045678900">+91 80 4567 8900</a>
+</div>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-primary opacity-60 mb-1">HOURS</p>
+<p class="text-body-md font-body-md text-on-surface-variant">Monday — Saturday<br/>09:00 AM — 06:00 PM IST</p>
+</div>
+</div>
+</div>
+<div class="aspect-square w-full rounded-lg overflow-hidden border border-silver-metallic shadow-sm">
+<img class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700" data-alt="A stylized, high-contrast map of central Bengaluru highlighting architectural landmarks in a primary blue and gold-light color scheme. The aesthetic is professional and clean, using minimalist lines and institutional typography to convey precision. The lighting is bright and modern, suggesting a high-end commercial environment." data-location="Bengaluru" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbOKcnosNkQ42opA6CQkvXkPj1GRDwF9Jjx5eKG-2R4rG8xR-iQr3xXph-ClOxYCKNGn-pgF314HTio4v2PyfCCRwc3e7oDTOU8FhywVhXSe5Qz9CvBfxArbopigT4n-caKRarNAqffWQ1ZZamjyxRc9VcKJCEicFhM9gSsHgo-GARhWjGIkongxggRn77lFaXG3scmgnS6CnJeurAL_EXV1H-xx5rKBoNuZUxajeaxVhiGDMkUPYBsLGzHz9yZdA3ROUO3wkS08Sl"/>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-8 md:p-12 border border-silver-metallic rounded-lg">
+<form class="space-y-8" onsubmit="event.preventDefault(); alert('Enquiry submitted successfully.');">
+<!-- Interest Tags -->
+<div class="space-y-4">
+<label class="font-label-caps text-label-caps text-primary uppercase">I am interested in</label>
+<div class="flex flex-wrap gap-3">
+<button class="px-5 py-2 border border-silver-metallic rounded-full text-label-caps font-label-caps transition-all active:scale-95" onclick="this.classList.toggle('bg-primary'); this.classList.toggle('text-white'); this.classList.toggle('border-primary');" type="button">Buying</button>
+<button class="px-5 py-2 border border-silver-metallic rounded-full text-label-caps font-label-caps transition-all active:scale-95" onclick="this.classList.toggle('bg-primary'); this.classList.toggle('text-white'); this.classList.toggle('border-primary');" type="button">Renting</button>
+<button class="px-5 py-2 border border-silver-metallic rounded-full text-label-caps font-label-caps transition-all active:scale-95" onclick="this.classList.toggle('bg-primary'); this.classList.toggle('text-white'); this.classList.toggle('border-primary');" type="button">Selling</button>
+<button class="px-5 py-2 border border-silver-metallic rounded-full text-label-caps font-label-caps transition-all active:scale-95" onclick="this.classList.toggle('bg-primary'); this.classList.toggle('text-white'); this.classList.toggle('border-primary');" type="button">Investment</button>
+<button class="px-5 py-2 border border-silver-metallic rounded-full text-label-caps font-label-caps transition-all active:scale-95" onclick="this.classList.toggle('bg-primary'); this.classList.toggle('text-white'); this.classList.toggle('border-primary');" type="button">Commercial</button>
+</div>
+</div>
+<!-- Fields -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative">
+<label class="font-label-caps text-label-caps text-primary uppercase block mb-2">Name</label>
+<input class="w-full bg-transparent border-b border-silver-metallic focus:border-gold-light outline-none py-3 font-body-md text-on-surface transition-colors placeholder:text-silver-metallic placeholder:font-light" placeholder="John Doe" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-primary uppercase block mb-2">Email</label>
+<input class="w-full bg-transparent border-b border-silver-metallic focus:border-gold-light outline-none py-3 font-body-md text-on-surface transition-colors placeholder:text-silver-metallic" placeholder="john@example.com" type="email"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-primary uppercase block mb-2">Phone</label>
+<input class="w-full bg-transparent border-b border-silver-metallic focus:border-gold-light outline-none py-3 font-body-md text-on-surface transition-colors placeholder:text-silver-metallic" placeholder="+91 00000 00000" type="tel"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-primary uppercase block mb-2">Budget Range</label>
+<select class="w-full bg-transparent border-b border-silver-metallic focus:border-gold-light outline-none py-3 font-body-md text-on-surface transition-colors appearance-none">
+<option>Select range</option>
+<option>₹5Cr — ₹10Cr</option>
+<option>₹10Cr — ₹25Cr</option>
+<option>₹25Cr +</option>
+<option>Institutional / Custom</option>
+</select>
+</div>
+</div>
+<!-- Timeline & Referral -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative">
+<label class="font-label-caps text-label-caps text-primary uppercase block mb-2">Timeline</label>
+<select class="w-full bg-transparent border-b border-silver-metallic focus:border-gold-light outline-none py-3 font-body-md text-on-surface transition-colors appearance-none">
+<option>Select timeline</option>
+<option>Immediate</option>
+<option>3—6 Months</option>
+<option>6—12 Months</option>
+<option>Exploration Stage</option>
+</select>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-primary uppercase block mb-2">Referral Source</label>
+<select class="w-full bg-transparent border-b border-silver-metallic focus:border-gold-light outline-none py-3 font-body-md text-on-surface transition-colors appearance-none">
+<option>How did you hear about us?</option>
+<option>Referral</option>
+<option>LinkedIn</option>
+<option>Property Portal</option>
+<option>Architectural Digest</option>
+</select>
+</div>
+</div>
+<!-- Message -->
+<div class="relative">
+<label class="font-label-caps text-label-caps text-primary uppercase block mb-2">Message</label>
+<textarea class="w-full bg-transparent border-b border-silver-metallic focus:border-gold-light outline-none py-3 font-body-md text-on-surface transition-colors resize-none placeholder:text-silver-metallic" placeholder="Tell us more about your specific requirements..." rows="4"></textarea>
+</div>
+<button class="w-full md:w-auto px-12 py-5 bg-gold-light text-primary font-label-caps text-label-caps font-bold hover:bg-primary hover:text-white transition-all duration-300 shadow-lg active:scale-95" type="submit">
+                        Submit Enquiry
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer (from JSON) -->
+<footer class="bg-primary dark:bg-deep-navy-dark border-t border-primary-container w-full py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-1">
+<h2 class="font-headline-md text-headline-md text-gold-light mb-4">CHRONOS</h2>
+<p class="text-silver-metallic opacity-70 font-body-md text-body-md">Architectural Precision.<br/>Institutional Trust.</p>
+</div>
+<div class="md:col-span-1 space-y-4">
+<h4 class="font-label-caps text-label-caps text-gold-light uppercase">Portfolio</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-silver-metallic opacity-70 hover:opacity-100 font-label-caps text-label-caps transition-all hover:translate-x-1" href="#">Residential Portfolio</a>
+<a class="text-silver-metallic opacity-70 hover:opacity-100 font-label-caps text-label-caps transition-all hover:translate-x-1" href="#">Commercial Assets</a>
+</nav>
+</div>
+<div class="md:col-span-1 space-y-4">
+<h4 class="font-label-caps text-label-caps text-gold-light uppercase">Company</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-silver-metallic opacity-70 hover:opacity-100 font-label-caps text-label-caps transition-all hover:translate-x-1" href="#">Investor Relations</a>
+<a class="text-silver-metallic opacity-70 hover:opacity-100 font-label-caps text-label-caps transition-all hover:translate-x-1" href="#">Sustainability</a>
+</nav>
+</div>
+<div class="md:col-span-1 space-y-4">
+<h4 class="font-label-caps text-label-caps text-gold-light uppercase">Legal</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-silver-metallic opacity-70 hover:opacity-100 font-label-caps text-label-caps transition-all hover:translate-x-1" href="#">Privacy Policy</a>
+</nav>
+</div>
+<div class="md:col-span-4 pt-12 border-t border-primary-container/30">
+<p class="text-silver-metallic opacity-70 font-body-md text-body-md text-center">© 2024 Chronos Properties. Architectural Precision. Institutional Trust.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Drawer Logic
+        const drawer = document.getElementById('nav-drawer');
+        const overlay = document.getElementById('drawer-overlay');
+        const toggle = document.getElementById('drawer-toggle');
+        const close = document.getElementById('drawer-close');
+
+        const openDrawer = () => {
+            drawer.classList.remove('-translate-x-full');
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+        };
+
+        const closeDrawer = () => {
+            drawer.classList.add('-translate-x-full');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+        };
+
+        toggle.addEventListener('click', openDrawer);
+        close.addEventListener('click', closeDrawer);
+        overlay.addEventListener('click', closeDrawer);
+
+        // Form Animation Effect
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.previousElementSibling.classList.add('text-gold-light');
+            });
+            input.addEventListener('blur', () => {
+                input.previousElementSibling.classList.remove('text-gold-light');
+            });
+        });
+    </script>
+</body></html>

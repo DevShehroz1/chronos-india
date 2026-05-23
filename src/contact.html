@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Chronos Properties</title>
+  <link rel="stylesheet" href="output.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-canvas-white text-on-surface font-body-md overflow-x-hidden selection:bg-gold-light selection:text-primary">
+
+<!-- ─── NAV ──────────────────────────────────────────────────── -->
+<header id="site-header" class="sticky top-0 left-0 right-0 z-50 bg-canvas-white border-b border-silver-metallic shadow-sm">
+  <nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto h-20">
+    <a href="index.html" class="font-headline-md text-headline-md text-primary uppercase tracking-tighter" aria-label="Chronos Properties home">
+      Chronos Properties
+    </a>
+    <div class="hidden md:flex items-center gap-10" role="navigation" aria-label="Primary">
+      <a href="index.html#services" class="nav-link relative font-body-md text-body-md tracking-wide text-on-surface-variant hover:text-primary transition-colors duration-300 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-gold-light after:transition-[width] after:duration-300 hover:after:w-full">Services</a>
+      <a href="#" class="nav-link relative font-body-md text-body-md tracking-wide text-on-surface-variant hover:text-primary transition-colors duration-300 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-gold-light after:transition-[width] after:duration-300 hover:after:w-full">Advisory</a>
+      <a href="#" class="nav-link relative font-body-md text-body-md tracking-wide text-on-surface-variant hover:text-primary transition-colors duration-300 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-gold-light after:transition-[width] after:duration-300 hover:after:w-full">Insights</a>
+      <a href="contact.html" class="relative font-body-md text-body-md tracking-wide text-primary font-bold after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-gold-light">Contact</a>
+    </div>
+    <a href="contact.html" class="hidden md:inline-flex shimmer-btn bg-primary text-on-primary px-8 py-3 font-button-text text-button-text uppercase tracking-widest hover:bg-gold-light hover:text-primary transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-light">
+      Enquire Now
+    </a>
+    <button id="nav-open" class="md:hidden text-primary interactive-scale p-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <span class="material-symbols-outlined text-3xl" aria-hidden="true">menu</span>
+    </button>
+  </nav>
+</header>
+
+<!-- ─── MOBILE DRAWER ─────────────────────────────────────────── -->
+<div id="drawer-overlay" class="fixed inset-0 bg-black/50 z-[60] opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
+<aside id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu"
+  class="fixed left-0 top-0 h-full w-80 z-[70] bg-canvas-white border-r border-silver-metallic -translate-x-full transition-transform duration-300 flex flex-col p-6 shadow-2xl">
+  <div class="flex justify-between items-center mb-10">
+    <span class="font-headline-md text-headline-md text-primary uppercase tracking-tighter">Chronos</span>
+    <button id="nav-close" class="interactive-scale focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light" aria-label="Close navigation menu">
+      <span class="material-symbols-outlined text-2xl" aria-hidden="true">close</span>
+    </button>
+  </div>
+  <nav class="flex flex-col gap-1" aria-label="Mobile primary">
+    <a href="index.html" class="flex items-center gap-4 p-4 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface rounded-lg transition-colors">
+      <span class="material-symbols-outlined text-gold-light" aria-hidden="true">home</span>Home
+    </a>
+    <a href="#" class="flex items-center gap-4 p-4 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface rounded-lg transition-colors">
+      <span class="material-symbols-outlined text-gold-light" aria-hidden="true">apartment</span>Portfolio
+    </a>
+    <a href="#" class="flex items-center gap-4 p-4 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface rounded-lg transition-colors">
+      <span class="material-symbols-outlined text-gold-light" aria-hidden="true">monetization_on</span>Investment
+    </a>
+    <a href="contact.html" class="flex items-center gap-4 p-4 font-label-caps text-label-caps bg-primary text-on-primary rounded-lg mt-4 transition-colors hover:bg-primary-container">
+      <span class="material-symbols-outlined" aria-hidden="true">mail</span>Contact Us
+    </a>
+  </nav>
+</aside>
+
+<!-- ─── HERO ──────────────────────────────────────────────────── -->
+<section class="relative h-[400px] md:h-[520px] flex items-center justify-center overflow-hidden bg-primary" aria-label="Page hero">
+  <div class="absolute inset-0 opacity-35" aria-hidden="true">
+    <img
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP0aT2Jl3niGPwQhXlu9gT_F2acM8NeRwwJK1mqOfSJy8vTYbya2IQCy4lOjwGJjIMVroO5tK3Kvb3pdBjKK4khSNeocLcO-saNGZ0XBWxD4ZekeQC91UMGBb6Cvyla1XoxQHu_0gqzPtdCnEMDVsZbQVsrjifgQn0qYi2CFE3Sm1Vj3hRbAWWtzo2dqnhjz0dE3DT0986ddLM3crFmfsBOrGGd5n-A5PupmMnmbPwFsuiQit5TFZSmhotfzrsPcPoNUCn58RE5S2M"
+      alt="Grand modern glass skyscraper in Bengaluru at twilight — soft blue and gold ambient lighting conveys corporate luxury and permanence"
+      class="w-full h-full object-cover"
+      width="2560" height="1440"
+    />
+  </div>
+  <div class="relative z-10 text-center px-margin-mobile">
+    <p class="font-label-caps text-label-caps text-gold-light mb-4 uppercase tracking-[0.2em] reveal-up">Get in Touch</p>
+    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-canvas-white reveal-up" style="--reveal-delay:0.2s">Let's Build Something Lasting</h1>
+  </div>
+</section>
+
+<!-- ─── MAIN CONTENT ──────────────────────────────────────────── -->
+<main>
+  <section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" aria-labelledby="contact-heading">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+      <!-- ── Left: Info ── -->
+      <div class="lg:col-span-5 space-y-12 reveal-up">
+        <div>
+          <h2 id="contact-heading" class="font-headline-xl text-headline-xl text-primary mb-8 border-l-4 border-gold-light pl-6">Our Sanctuary</h2>
+          <div class="space-y-8">
+            <div class="flex gap-4">
+              <span class="material-symbols-outlined text-gold-light mt-1 flex-shrink-0" aria-hidden="true">location_on</span>
+              <div>
+                <h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Office Address</h3>
+                <address class="font-body-lg text-body-lg text-primary not-italic">
+                  Prestige Trade Tower, Palace Road,<br />High Grounds, Bengaluru, 560001
+                </address>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="material-symbols-outlined text-gold-light mt-1 flex-shrink-0" aria-hidden="true">call</span>
+              <div>
+                <h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Phone</h3>
+                <a href="tel:+918045678900" class="font-body-lg text-body-lg text-primary hover:text-gold-light transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light">+91 80 4567 8900</a>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="material-symbols-outlined text-gold-light mt-1 flex-shrink-0" aria-hidden="true">mail</span>
+              <div>
+                <h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Email</h3>
+                <a href="mailto:concierge@chronos.in" class="font-body-lg text-body-lg text-primary hover:text-gold-light transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light">concierge@chronos.in</a>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="material-symbols-outlined text-gold-light mt-1 flex-shrink-0" aria-hidden="true">schedule</span>
+              <div>
+                <h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Business Hours</h3>
+                <p class="font-body-lg text-body-lg text-primary">Monday – Friday: 09:00 — 18:00<br />Saturday: By Appointment Only</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full aspect-video overflow-hidden group reveal-up" style="--reveal-delay:0.2s">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAc_clRO7DDhDTKMuLWa_2FwAikr7VBNXuyYwDEJk2E4XTVmbpioPmvS-yo9E1Co_ghkZ9Ne9kghoxIyoUcIcw-m_J0qlV8wzMFwm3S-vbJBqrKwnW4CoSldUFxze8C8ybJvmDQaNNTwXzwpHCwobqKQAVRbPNmeJK9jQFFdsvrGpNu3gq2_d7ZUMHsdgWUnaQTW94w37ITJbSMyOZGpgnEH9yslXa7mWZLpFEk9XyUIW3xEmUseOCSkN"
+            alt="Stylized minimalist map of Bengaluru's High Grounds area — silver, deep navy, and gold palette highlighting the central business district"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            width="800" height="450" loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- ── Right: Form ── -->
+      <div class="lg:col-span-7 bg-surface p-8 md:p-12 border border-silver-metallic shadow-sm reveal-up" style="--reveal-delay:0.3s">
+        <form id="enquiry-form" class="space-y-10" novalidate>
+          <!-- Interest tags -->
+          <fieldset>
+            <legend class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-6">How can we assist you?</legend>
+            <div class="flex flex-wrap gap-3" role="group" aria-label="Select your interest">
+              <button type="button" class="interest-tag px-5 py-2.5 border border-silver-metallic font-button-text text-button-text hover:border-gold-light transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light min-h-[44px]" aria-pressed="false">Buying</button>
+              <button type="button" class="interest-tag px-5 py-2.5 border border-silver-metallic font-button-text text-button-text hover:border-gold-light transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light min-h-[44px]" aria-pressed="false">Renting</button>
+              <button type="button" class="interest-tag px-5 py-2.5 border border-silver-metallic font-button-text text-button-text hover:border-gold-light transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light min-h-[44px]" aria-pressed="false">Selling</button>
+              <button type="button" class="interest-tag px-5 py-2.5 border border-silver-metallic font-button-text text-button-text hover:border-gold-light transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light min-h-[44px]" aria-pressed="false">Investment</button>
+              <button type="button" class="interest-tag px-5 py-2.5 border border-silver-metallic font-button-text text-button-text hover:border-gold-light transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light min-h-[44px]" aria-pressed="false">Portfolio Advisory</button>
+            </div>
+          </fieldset>
+
+          <!-- Personal info -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-8">
+            <div class="flex flex-col">
+              <label for="first-name" class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">First Name <span aria-hidden="true" class="text-error">*</span></label>
+              <input id="first-name" name="first-name" type="text" required autocomplete="given-name"
+                class="form-input-minimal font-body-md text-body-md py-3" placeholder="Julian" />
+            </div>
+            <div class="flex flex-col">
+              <label for="last-name" class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Last Name <span aria-hidden="true" class="text-error">*</span></label>
+              <input id="last-name" name="last-name" type="text" required autocomplete="family-name"
+                class="form-input-minimal font-body-md text-body-md py-3" placeholder="Vandervilt" />
+            </div>
+            <div class="flex flex-col">
+              <label for="email" class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Email Address <span aria-hidden="true" class="text-error">*</span></label>
+              <input id="email" name="email" type="email" required autocomplete="email"
+                class="form-input-minimal font-body-md text-body-md py-3" placeholder="j@luxury.com" />
+            </div>
+            <div class="flex flex-col">
+              <label for="phone" class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Phone Number</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel"
+                class="form-input-minimal font-body-md text-body-md py-3" placeholder="+91 00000 00000" />
+            </div>
+          </div>
+
+          <!-- Dropdowns -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-8">
+            <div class="flex flex-col">
+              <label for="budget" class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Budget Range</label>
+              <select id="budget" name="budget" class="form-input-minimal font-body-md text-body-md py-3 cursor-pointer appearance-none" aria-label="Select your budget range">
+                <option value="" disabled selected>Select Range</option>
+                <option>₹5 Cr – ₹10 Cr</option>
+                <option>₹10 Cr – ₹25 Cr</option>
+                <option>₹25 Cr – ₹50 Cr</option>
+                <option>₹50 Cr +</option>
+              </select>
+            </div>
+            <div class="flex flex-col">
+              <label for="timeline" class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Timeline</label>
+              <select id="timeline" name="timeline" class="form-input-minimal font-body-md text-body-md py-3 cursor-pointer appearance-none" aria-label="Select your timeline">
+                <option value="" disabled selected>Select Timeline</option>
+                <option>Immediate</option>
+                <option>3 – 6 Months</option>
+                <option>6 – 12 Months</option>
+                <option>Planning Stage</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="flex flex-col">
+            <label for="message" class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">How can we help you?</label>
+            <textarea id="message" name="message" rows="4"
+              class="form-input-minimal font-body-md text-body-md py-3 resize-none"
+              placeholder="Tell us about your architectural aspirations..."></textarea>
+          </div>
+
+          <!-- Referral -->
+          <div class="flex flex-col">
+            <label for="referral" class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">How did you hear about us?</label>
+            <input id="referral" name="referral" type="text"
+              class="form-input-minimal font-body-md text-body-md py-3"
+              placeholder="Word of mouth, Social media, Event..." />
+          </div>
+
+          <!-- Submit -->
+          <div class="pt-2">
+            <button type="submit"
+              class="shimmer-btn w-full bg-gold-light text-primary font-button-text text-button-text py-5 uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-500 active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary min-h-[56px]">
+              Send Enquiry
+            </button>
+            <p class="text-center mt-6 font-body-md text-[13px] text-on-surface-variant opacity-60">
+              By submitting, you agree to our <a href="#" class="underline hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light">Privacy Policy</a> regarding your data.
+            </p>
+          </div>
+
+          <!-- Success message (hidden) -->
+          <div id="form-success" role="alert" aria-live="polite" class="hidden text-center py-8">
+            <span class="material-symbols-outlined text-5xl text-gold-light mb-4 block" aria-hidden="true">check_circle</span>
+            <p class="font-headline-md text-headline-md text-primary mb-2">Enquiry Received</p>
+            <p class="font-body-md text-on-surface-variant">Our team will be in touch within 24 hours.</p>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- ─── FOOTER ────────────────────────────────────────────────── -->
+<footer class="bg-surface-container-low text-on-surface py-section-gap border-t border-silver-metallic" aria-label="Site footer">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="md:col-span-2 space-y-6">
+      <div class="font-headline-md text-headline-md text-primary uppercase tracking-tighter">Chronos Properties</div>
+      <p class="font-body-md text-on-surface-variant max-w-sm opacity-80">
+        Redefining the Bengaluru skyline through institutional-grade architectural excellence and bespoke advisory for the discerning few.
+      </p>
+    </div>
+    <nav class="space-y-6" aria-label="Portfolio">
+      <h2 class="font-label-caps text-label-caps text-primary uppercase mb-6">Portfolio</h2>
+      <ul class="space-y-4 font-body-md" role="list">
+        <li><a href="#" class="text-on-surface-variant opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light">Residential Penthouses</a></li>
+        <li><a href="#" class="text-on-surface-variant opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light">Commercial Estates</a></li>
+        <li><a href="#" class="text-on-surface-variant opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light">Property Management</a></li>
+      </ul>
+    </nav>
+    <nav class="space-y-6" aria-label="Legal">
+      <h2 class="font-label-caps text-label-caps text-primary uppercase mb-6">Legal</h2>
+      <ul class="space-y-4 font-body-md" role="list">
+        <li><a href="#" class="text-on-surface-variant opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light">Corporate Governance</a></li>
+        <li><a href="#" class="text-on-surface-variant opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light">Privacy Policy</a></li>
+        <li><a href="#" class="text-on-surface-variant opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-light">Terms of Service</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-8 border-t border-silver-metallic/30">
+    <p class="font-label-caps text-label-caps text-on-surface-variant opacity-60 uppercase tracking-widest">
+      &copy; 2024 Chronos Properties. Architectural Excellence in Bengaluru.
+    </p>
+  </div>
+</footer>
+
+<script>
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// ─── Reveal animations ──────────────────────────────────────────
+if (!prefersReducedMotion) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const delay = entry.target.style.getPropertyValue('--reveal-delay') || '0s';
+      entry.target.style.transitionDelay = delay;
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+} else {
+  document.querySelectorAll('.reveal-up').forEach(el => el.classList.add('active'));
+}
+
+// ─── Interest tag toggles ───────────────────────────────────────
+document.querySelectorAll('.interest-tag').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const pressed = btn.getAttribute('aria-pressed') === 'true';
+    btn.setAttribute('aria-pressed', String(!pressed));
+    btn.classList.toggle('bg-primary', !pressed);
+    btn.classList.toggle('text-white', !pressed);
+    btn.classList.toggle('border-primary', !pressed);
+  });
+});
+
+// ─── Form submit ────────────────────────────────────────────────
+document.getElementById('enquiry-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  this.style.display = 'none';
+  document.getElementById('form-success').classList.remove('hidden');
+});
+
+// ─── Label focus highlight ──────────────────────────────────────
+document.querySelectorAll('input, select, textarea').forEach(el => {
+  const label = document.querySelector(`label[for="${el.id}"]`);
+  if (!label) return;
+  el.addEventListener('focus',  () => label.classList.add('text-gold-light'));
+  el.addEventListener('blur',   () => label.classList.remove('text-gold-light'));
+});
+
+// ─── Mobile drawer ──────────────────────────────────────────────
+(function () {
+  const drawer   = document.getElementById('mobile-drawer');
+  const overlay  = document.getElementById('drawer-overlay');
+  const openBtn  = document.getElementById('nav-open');
+  const closeBtn = document.getElementById('nav-close');
+  let focusableEls, firstEl, lastEl;
+
+  const open = () => {
+    drawer.classList.remove('-translate-x-full');
+    overlay.classList.remove('opacity-0', 'pointer-events-none');
+    overlay.setAttribute('aria-hidden', 'false');
+    openBtn.setAttribute('aria-expanded', 'true');
+    focusableEls = Array.from(drawer.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])'));
+    firstEl = focusableEls[0];
+    lastEl  = focusableEls[focusableEls.length - 1];
+    firstEl?.focus();
+    document.addEventListener('keydown', trapFocus);
+  };
+
+  const close = () => {
+    drawer.classList.add('-translate-x-full');
+    overlay.classList.add('opacity-0', 'pointer-events-none');
+    overlay.setAttribute('aria-hidden', 'true');
+    openBtn.setAttribute('aria-expanded', 'false');
+    document.removeEventListener('keydown', trapFocus);
+    openBtn.focus();
+  };
+
+  const trapFocus = (e) => {
+    if (e.key === 'Escape') { close(); return; }
+    if (e.key !== 'Tab') return;
+    if (e.shiftKey) {
+      if (document.activeElement === firstEl) { e.preventDefault(); lastEl.focus(); }
+    } else {
+      if (document.activeElement === lastEl) { e.preventDefault(); firstEl.focus(); }
+    }
+  };
+
+  openBtn.addEventListener('click', open);
+  closeBtn.addEventListener('click', close);
+  overlay.addEventListener('click', close);
+})();
+</script>
+</body>
+</html>

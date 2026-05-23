@@ -1,0 +1,264 @@
+{
+  "designSystems": [
+    {
+      "name": "assets/6f11cc31cebc4105bc458bea00292bc0",
+      "designSystem": {
+        "displayName": "Architectural Chronos",
+        "styleGuidelines": "## Brand & Style\n\nThis design system embodies the intersection of architectural permanence and contemporary lightness. It is designed for a sophisticated audience that values heritage, precision, and the quiet luxury of space. The personality is authoritative yet welcoming\u2014a digital translation of high-end estate residences.\n\nThe visual style is a hybrid of **Minimalism** and **Glassmorphism**. It utilizes heavy whitespace and a strict adherence to grid systems to evoke a sense of structural integrity. This is balanced by soft, translucent layers in the navigation and interactive elements, adding a layer of modern depth and \"motion-ready\" agility. Every interaction should feel intentional, smooth, and weighted.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop (1280px max-width) and a **Fluid Grid** on mobile. \n\n- **Structural Rhythm:** A 12-column grid is used with generous 32px gutters. \n- **White Space:** High-margin \"breathing room\" is essential. Large sections should be separated by 160px to maintain the \"architectural gallery\" feel.\n- **Alignment:** Content should predominantly be left-aligned for readability, with specific decorative headings (like the header) being centered to create a focal point.\n\n## Elevation & Depth\n\nThis design system uses a sophisticated mix of **Tonal Layers** and **Glassmorphism**.\n\n1.  **Floating Header:** The primary header is a centered, pill-shaped container using a backdrop-blur (20px) and a semi-transparent white fill (70% opacity). It features a very soft, diffused ambient shadow to separate it from the content scrolling beneath.\n2.  **Surface Tiers:** Backgrounds alternate between off-white tertiary colors and pure white containers.\n3.  **Soft Shadows:** Images and property cards use \"architectural\" shadows\u2014long, low-opacity, and highly diffused\u2014mimicking the way natural light hits a building.\n\n## Components\n\n- **Header:** A centered, floating pill. Use a 1px border of #FFFFFF at 20% opacity for a glass-edge effect. \n- **Primary Buttons:** High-contrast Navy (#0F2041) backgrounds with white text. Pill-shaped. On hover, they should transition to the Gold (#C9A052) accent color.\n- **Secondary Buttons:** Outlined with a 1px border of the primary color. \n- **Property Cards:** Use a vertical orientation with large-scale imagery. The text should sit on a white or light-tan base with a subtle 4px corner radius.\n- **Input Fields:** Minimalist. Only a bottom border (1px) in the primary color, which thickens on focus. Labels use `label-caps` typography.\n- **Chips:** Small, rounded-sm containers with the tertiary background color, used for categorizing property types or status.",
+        "theme": {
+          "colorMode": "LIGHT",
+          "font": "EB_GARAMOND",
+          "roundness": "ROUND_FOUR",
+          "customColor": "#0f2041",
+          "headlineFont": "EB_GARAMOND",
+          "bodyFont": "MANROPE",
+          "labelFont": "MANROPE",
+          "namedColors": {
+            "background": "#fcf9f8",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#f3f0ef",
+            "inverse_primary": "#b6c6f0",
+            "inverse_surface": "#303030",
+            "on_background": "#1b1c1c",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#7988af",
+            "on_primary_fixed": "#081a3b",
+            "on_primary_fixed_variant": "#374669",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#78580e",
+            "on_secondary_fixed": "#271900",
+            "on_secondary_fixed_variant": "#5e4200",
+            "on_surface": "#1b1c1c",
+            "on_surface_variant": "#45464e",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#8a8882",
+            "on_tertiary_fixed": "#1c1c18",
+            "on_tertiary_fixed_variant": "#474742",
+            "outline": "#75777f",
+            "outline_variant": "#c5c6cf",
+            "primary": "#000921",
+            "primary_container": "#0f2041",
+            "primary_fixed": "#d9e2ff",
+            "primary_fixed_dim": "#b6c6f0",
+            "secondary": "#7a590f",
+            "secondary_container": "#fed17d",
+            "secondary_fixed": "#ffdea6",
+            "secondary_fixed_dim": "#ecc06e",
+            "surface": "#fcf9f8",
+            "surface_bright": "#fcf9f8",
+            "surface_container": "#f0eded",
+            "surface_container_high": "#eae7e7",
+            "surface_container_highest": "#e4e2e1",
+            "surface_container_low": "#f6f3f2",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#dcd9d9",
+            "surface_tint": "#4f5e82",
+            "surface_variant": "#e4e2e1",
+            "tertiary": "#0a0a07",
+            "tertiary_container": "#21211d",
+            "tertiary_fixed": "#e5e2db",
+            "tertiary_fixed_dim": "#c9c6c0"
+          },
+          "designMd": "---\nname: Architectural Chronos\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e4e2e1'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#45464e'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f3f0ef'\n  outline: '#75777f'\n  outline-variant: '#c5c6cf'\n  surface-tint: '#4f5e82'\n  primary: '#000921'\n  on-primary: '#ffffff'\n  primary-container: '#0f2041'\n  on-primary-container: '#7988af'\n  inverse-primary: '#b6c6f0'\n  secondary: '#7a590f'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed17d'\n  on-secondary-container: '#78580e'\n  tertiary: '#0a0a07'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#21211d'\n  on-tertiary-container: '#8a8882'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d9e2ff'\n  primary-fixed-dim: '#b6c6f0'\n  on-primary-fixed: '#081a3b'\n  on-primary-fixed-variant: '#374669'\n  secondary-fixed: '#ffdea6'\n  secondary-fixed-dim: '#ecc06e'\n  on-secondary-fixed: '#271900'\n  on-secondary-fixed-variant: '#5e4200'\n  tertiary-fixed: '#e5e2db'\n  tertiary-fixed-dim: '#c9c6c0'\n  on-tertiary-fixed: '#1c1c18'\n  on-tertiary-fixed-variant: '#474742'\n  background: '#fcf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e1'\ntypography:\n  display-lg:\n    fontFamily: EB Garamond\n    fontSize: 64px\n    fontWeight: '400'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: EB Garamond\n    fontSize: 40px\n    fontWeight: '400'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: EB Garamond\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Manrope\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Manrope\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Manrope\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  gutter: 32px\n  margin-desktop: 80px\n  margin-mobile: 20px\n  section-gap: 160px\n---\n\n## Brand & Style\n\nThis design system embodies the intersection of architectural permanence and contemporary lightness. It is designed for a sophisticated audience that values heritage, precision, and the quiet luxury of space. The personality is authoritative yet welcoming\u2014a digital translation of high-end estate residences.\n\nThe visual style is a hybrid of **Minimalism** and **Glassmorphism**. It utilizes heavy whitespace and a strict adherence to grid systems to evoke a sense of structural integrity. This is balanced by soft, translucent layers in the navigation and interactive elements, adding a layer of modern depth and \"motion-ready\" agility. Every interaction should feel intentional, smooth, and weighted.\n\n## Colors\n\nThe palette is anchored by a deep navy and a refined gold, reflecting the Chronos brand identity. \n\n- **Primary (#0F2041):** Used for typography, structural borders, and high-emphasis backgrounds. It provides the \"weight\" of the brand.\n- **Secondary (#C9A052):** Reserved for accents, calls to action, and subtle decorative elements. It adds warmth and a premium finish.\n- **Tertiary (#F4F1EA):** A warm off-white derived from limestone and natural materials, used for section backgrounds to soften the starkness of pure white.\n- **Surface:** Pure white is used for card surfaces and interactive containers to ensure legibility and a clean aesthetic.\n\n## Typography\n\nThe typographic system relies on the classical elegance of **EB Garamond** for all editorial and headline content. Its varied stroke weights and sharp serifs create a literary, high-end feel.\n\nTo maintain modern usability, **Manrope** is used for body copy and functional labels. This sans-serif provides a geometric contrast to the serifs, ensuring that the interface remains legible and professional. Large display headings should utilize negative letter-spacing to feel more compact and architectural.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop (1280px max-width) and a **Fluid Grid** on mobile. \n\n- **Structural Rhythm:** A 12-column grid is used with generous 32px gutters. \n- **White Space:** High-margin \"breathing room\" is essential. Large sections should be separated by 160px to maintain the \"architectural gallery\" feel.\n- **Alignment:** Content should predominantly be left-aligned for readability, with specific decorative headings (like the header) being centered to create a focal point.\n\n## Elevation & Depth\n\nThis design system uses a sophisticated mix of **Tonal Layers** and **Glassmorphism**.\n\n1.  **Floating Header:** The primary header is a centered, pill-shaped container using a backdrop-blur (20px) and a semi-transparent white fill (70% opacity). It features a very soft, diffused ambient shadow to separate it from the content scrolling beneath.\n2.  **Surface Tiers:** Backgrounds alternate between off-white tertiary colors and pure white containers.\n3.  **Soft Shadows:** Images and property cards use \"architectural\" shadows\u2014long, low-opacity, and highly diffused\u2014mimicking the way natural light hits a building.\n\n## Shapes\n\nThe shape language is primarily **Soft (0.25rem)** to maintain a structured, professional appearance. This subtle rounding removes the clinical sharpness of 90-degree corners without becoming \"bubbly.\"\n\nThe exception is the **Pill-shaped** aesthetic used for the main navigation header and primary action buttons, which serves to highlight these as modern, interactive touchpoints within a more traditional architectural framework.\n\n## Components\n\n- **Header:** A centered, floating pill. Use a 1px border of #FFFFFF at 20% opacity for a glass-edge effect. \n- **Primary Buttons:** High-contrast Navy (#0F2041) backgrounds with white text. Pill-shaped. On hover, they should transition to the Gold (#C9A052) accent color.\n- **Secondary Buttons:** Outlined with a 1px border of the primary color. \n- **Property Cards:** Use a vertical orientation with large-scale imagery. The text should sit on a white or light-tan base with a subtle 4px corner radius.\n- **Input Fields:** Minimalist. Only a bottom border (1px) in the primary color, which thickens on focus. Labels use `label-caps` typography.\n- **Chips:** Small, rounded-sm containers with the tertiary background color, used for categorizing property types or status.",
+          "colorVariant": "FIDELITY",
+          "overridePrimaryColor": "#0f2041",
+          "overrideSecondaryColor": "#c9a052",
+          "overrideTertiaryColor": "#f4f1ea",
+          "overrideNeutralColor": "#2a2a2a",
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Manrope",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "Manrope",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "display-lg": {
+              "fontFamily": "EB Garamond",
+              "fontSize": "64px",
+              "fontWeight": "400",
+              "lineHeight": "1.1",
+              "letterSpacing": "-0.02em"
+            },
+            "display-lg-mobile": {
+              "fontFamily": "EB Garamond",
+              "fontSize": "40px",
+              "fontWeight": "400",
+              "lineHeight": "1.2"
+            },
+            "headline-md": {
+              "fontFamily": "EB Garamond",
+              "fontSize": "32px",
+              "fontWeight": "400",
+              "lineHeight": "1.3"
+            },
+            "label-caps": {
+              "fontFamily": "Manrope",
+              "fontSize": "12px",
+              "fontWeight": "600",
+              "lineHeight": "1.2",
+              "letterSpacing": "0.1em"
+            }
+          },
+          "spacing": {
+            "gutter": "32px",
+            "margin-desktop": "80px",
+            "margin-mobile": "20px",
+            "section-gap": "160px",
+            "unit": "8px"
+          },
+          "headlineFontFamily": "Eb Garamond",
+          "bodyFontFamily": "Manrope",
+          "labelFontFamily": "Manrope"
+        }
+      },
+      "version": "1"
+    },
+    {
+      "name": "assets/80d2085cdfa245468fbafd1fdc956352",
+      "designSystem": {
+        "displayName": "Midnight Gold Architectural System",
+        "styleGuidelines": "## Brand & Style\n\nThe design system is crafted to evoke a sense of permanence, architectural precision, and institutional trust. It serves a high-end real estate market in Bengaluru, where tradition meets rapid modernization. The aesthetic is **Minimalist but Rich**, prioritizing clarity and high-quality imagery over decorative clutter. \n\nThe style combines the structural integrity of **Corporate Modernism** with the warmth of **Minimalist Luxury**. We utilize generous white space to signify exclusivity\u2014mimicking the airy, open layouts of premium villas and penthouses. Visual interest is generated through high-contrast typography and intentional metallic accents that guide the user\u2019s eye toward primary actions.\n\n## Layout & Spacing\n\nThis design system follows a **Fixed Grid** philosophy for desktop to maintain a gallery-like structure, transitioning to a fluid model for mobile.\n\n*   **Desktop:** A 12-column grid with 24px gutters. Use large margins (64px+) to prevent content from feeling crowded.\n*   **Sectioning:** Use aggressive vertical spacing (`section-gap`) to separate distinct property narratives or services.\n*   **Alignment:** Elements should feel \"hung\" from the grid, with a strong preference for left-aligned text to mirror editorial layouts.\n\n## Elevation & Depth\n\nTo maintain a \"sharp\" and professional feel, depth is conveyed through **Low-contrast Outlines** and **Ambient Shadows** rather than heavy gradients.\n\n*   **Surface Layers:** Use very light grey backgrounds (`#F8F9FA`) to distinguish secondary content blocks from the main white canvas.\n*   **Shadows:** Shadows should be nearly invisible\u2014high blur (32px+), low opacity (4-8%), and slightly tinted with the Primary Blue to ensure they feel integrated into the environment.\n*   **Borders:** Use thin, 1px borders in `silver-metallic` for cards and input fields to define structure without adding visual weight.\n\n## Components\n\n### Buttons\n*   **Primary:** Solid `Primary Blue` background with White text. Sharp corners.\n*   **Accent:** Solid `Refined Gold` background with `Primary Blue` text for high-importance conversion points.\n*   **Ghost:** Transparent background with a 1px `Refined Gold` border.\n\n### Cards\n*   Cards use a white background with a 1px `silver-metallic` border. \n*   On hover, a very subtle ambient shadow is applied to suggest \"lift\" without softening the sharp edges.\n\n### Inputs\n*   Bottom-border only (minimalist style) or full 1px border.\n*   Labels use the `label-caps` typography style placed above the field.\n\n### Photography\n*   Architectural photography should be full-bleed or large-scale.\n*   Use a subtle \"Midnight Blue\" overlay (10-20% opacity) on hero images to ensure white text remains legible while keeping the brand's color presence.",
+        "theme": {
+          "colorMode": "LIGHT",
+          "font": "EB_GARAMOND",
+          "customColor": "#0f2041",
+          "headlineFont": "EB_GARAMOND",
+          "bodyFont": "MANROPE",
+          "labelFont": "MANROPE",
+          "namedColors": {
+            "background": "#f8f9ff",
+            "canvas-white": "#FFFFFF",
+            "deep-navy-dark": "#081226",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "gold-light": "#DCC08A",
+            "inverse_on_surface": "#eaf1ff",
+            "inverse_primary": "#b6c6f0",
+            "inverse_surface": "#213145",
+            "on_background": "#0b1c30",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#7988af",
+            "on_primary_fixed": "#081a3b",
+            "on_primary_fixed_variant": "#374669",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#78580e",
+            "on_secondary_fixed": "#271900",
+            "on_secondary_fixed_variant": "#5e4200",
+            "on_surface": "#0b1c30",
+            "on_surface_variant": "#45464e",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#ac7f59",
+            "on_tertiary_fixed": "#2e1500",
+            "on_tertiary_fixed_variant": "#623f1e",
+            "outline": "#75777f",
+            "outline_variant": "#c5c6cf",
+            "primary": "#000921",
+            "primary_container": "#0f2041",
+            "primary_fixed": "#d9e2ff",
+            "primary_fixed_dim": "#b6c6f0",
+            "secondary": "#7a590f",
+            "secondary_container": "#fed17d",
+            "secondary_fixed": "#ffdea6",
+            "secondary_fixed_dim": "#ecc06e",
+            "silver-metallic": "#E2E8F0",
+            "surface": "#f8f9ff",
+            "surface_bright": "#f8f9ff",
+            "surface_container": "#e5eeff",
+            "surface_container_high": "#dce9ff",
+            "surface_container_highest": "#d3e4fe",
+            "surface_container_low": "#eff4ff",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#cbdbf5",
+            "surface_tint": "#4f5e82",
+            "surface_variant": "#d3e4fe",
+            "tertiary": "#150700",
+            "tertiary_container": "#361a00",
+            "tertiary_fixed": "#ffdcc1",
+            "tertiary_fixed_dim": "#f0bc92"
+          },
+          "designMd": "---\nname: Midnight Gold Architectural System\ncolors:\n  surface: '#f8f9ff'\n  surface-dim: '#cbdbf5'\n  surface-bright: '#f8f9ff'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#eff4ff'\n  surface-container: '#e5eeff'\n  surface-container-high: '#dce9ff'\n  surface-container-highest: '#d3e4fe'\n  on-surface: '#0b1c30'\n  on-surface-variant: '#45464e'\n  inverse-surface: '#213145'\n  inverse-on-surface: '#eaf1ff'\n  outline: '#75777f'\n  outline-variant: '#c5c6cf'\n  surface-tint: '#4f5e82'\n  primary: '#000921'\n  on-primary: '#ffffff'\n  primary-container: '#0f2041'\n  on-primary-container: '#7988af'\n  inverse-primary: '#b6c6f0'\n  secondary: '#7a590f'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed17d'\n  on-secondary-container: '#78580e'\n  tertiary: '#150700'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#361a00'\n  on-tertiary-container: '#ac7f59'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d9e2ff'\n  primary-fixed-dim: '#b6c6f0'\n  on-primary-fixed: '#081a3b'\n  on-primary-fixed-variant: '#374669'\n  secondary-fixed: '#ffdea6'\n  secondary-fixed-dim: '#ecc06e'\n  on-secondary-fixed: '#271900'\n  on-secondary-fixed-variant: '#5e4200'\n  tertiary-fixed: '#ffdcc1'\n  tertiary-fixed-dim: '#f0bc92'\n  on-tertiary-fixed: '#2e1500'\n  on-tertiary-fixed-variant: '#623f1e'\n  background: '#f8f9ff'\n  on-background: '#0b1c30'\n  surface-variant: '#d3e4fe'\n  canvas-white: '#FFFFFF'\n  silver-metallic: '#E2E8F0'\n  deep-navy-dark: '#081226'\n  gold-light: '#DCC08A'\ntypography:\n  display-lg:\n    fontFamily: ebGaramond\n    fontSize: 64px\n    fontWeight: '500'\n    lineHeight: 72px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: ebGaramond\n    fontSize: 40px\n    fontWeight: '500'\n    lineHeight: 48px\n  headline-xl:\n    fontFamily: ebGaramond\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 56px\n  headline-md:\n    fontFamily: ebGaramond\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: manrope\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: manrope\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: manrope\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.1em\n  button-text:\n    fontFamily: manrope\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\nspacing:\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is crafted to evoke a sense of permanence, architectural precision, and institutional trust. It serves a high-end real estate market in Bengaluru, where tradition meets rapid modernization. The aesthetic is **Minimalist but Rich**, prioritizing clarity and high-quality imagery over decorative clutter. \n\nThe style combines the structural integrity of **Corporate Modernism** with the warmth of **Minimalist Luxury**. We utilize generous white space to signify exclusivity\u2014mimicking the airy, open layouts of premium villas and penthouses. Visual interest is generated through high-contrast typography and intentional metallic accents that guide the user\u2019s eye toward primary actions.\n\n## Colors\n\nThis design system utilizes a high-contrast palette to establish immediate authority. \n\n*   **Primary (Deep Midnight Blue):** Used for text, navigation bars, and structural containers to establish trust and grounding.\n*   **Accent (Refined Gold):** Applied sparingly to interactive elements, call-to-actions, and highlights to signify excellence and premium status.\n*   **Neutrals:** A range of subtle greys and \"silver metallics\" provide soft transitions between the deep blues and the stark white background.\n*   **Canvas:** The primary background is pure white to maximize the impact of architectural photography and maintain a clean, spacious feel.\n\n## Typography\n\nThe typographic strategy balances **EB Garamond** for a timeless, academic feel with **Manrope** for modern legibility.\n\n*   **Headlines:** Utilize EB Garamond for all display and headline levels. It should be used to tell the \"story\" of the property.\n*   **Body Text:** Manrope provides a clean, neutral counterpoint that ensures data\u2014such as square footage or pricing\u2014is communicated with clinical efficiency.\n*   **Hierarchy:** Use the `label-caps` style for section headers and small metadata to maintain a structured, institutional feel.\n\n## Layout & Spacing\n\nThis design system follows a **Fixed Grid** philosophy for desktop to maintain a gallery-like structure, transitioning to a fluid model for mobile.\n\n*   **Desktop:** A 12-column grid with 24px gutters. Use large margins (64px+) to prevent content from feeling crowded.\n*   **Sectioning:** Use aggressive vertical spacing (`section-gap`) to separate distinct property narratives or services.\n*   **Alignment:** Elements should feel \"hung\" from the grid, with a strong preference for left-aligned text to mirror editorial layouts.\n\n## Elevation & Depth\n\nTo maintain a \"sharp\" and professional feel, depth is conveyed through **Low-contrast Outlines** and **Ambient Shadows** rather than heavy gradients.\n\n*   **Surface Layers:** Use very light grey backgrounds (`#F8F9FA`) to distinguish secondary content blocks from the main white canvas.\n*   **Shadows:** Shadows should be nearly invisible\u2014high blur (32px+), low opacity (4-8%), and slightly tinted with the Primary Blue to ensure they feel integrated into the environment.\n*   **Borders:** Use thin, 1px borders in `silver-metallic` for cards and input fields to define structure without adding visual weight.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px)**. This choice mirrors high-end architectural lines and reinforces the \"institutional\" and \"stable\" brand personality. \n\n*   **Buttons & Inputs:** Must always be rectangular with 90-degree corners.\n*   **Images:** Photography should never have rounded corners; it should appear as if it is \"mounted\" on the page.\n*   **Accents:** Gold highlights should appear as thin horizontal or vertical lines to emphasize the grid.\n\n## Components\n\n### Buttons\n*   **Primary:** Solid `Primary Blue` background with White text. Sharp corners.\n*   **Accent:** Solid `Refined Gold` background with `Primary Blue` text for high-importance conversion points.\n*   **Ghost:** Transparent background with a 1px `Refined Gold` border.\n\n### Cards\n*   Cards use a white background with a 1px `silver-metallic` border. \n*   On hover, a very subtle ambient shadow is applied to suggest \"lift\" without softening the sharp edges.\n\n### Inputs\n*   Bottom-border only (minimalist style) or full 1px border.\n*   Labels use the `label-caps` typography style placed above the field.\n\n### Photography\n*   Architectural photography should be full-bleed or large-scale.\n*   Use a subtle \"Midnight Blue\" overlay (10-20% opacity) on hero images to ensure white text remains legible while keeping the brand's color presence.",
+          "colorVariant": "FIDELITY",
+          "overridePrimaryColor": "#0f2041",
+          "overrideSecondaryColor": "#c9a052",
+          "overrideNeutralColor": "#64748b",
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "manrope",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "lineHeight": "28px"
+            },
+            "body-md": {
+              "fontFamily": "manrope",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px"
+            },
+            "button-text": {
+              "fontFamily": "manrope",
+              "fontSize": "14px",
+              "fontWeight": "600",
+              "lineHeight": "20px"
+            },
+            "display-lg": {
+              "fontFamily": "ebGaramond",
+              "fontSize": "64px",
+              "fontWeight": "500",
+              "lineHeight": "72px",
+              "letterSpacing": "-0.02em"
+            },
+            "display-lg-mobile": {
+              "fontFamily": "ebGaramond",
+              "fontSize": "40px",
+              "fontWeight": "500",
+              "lineHeight": "48px"
+            },
+            "headline-md": {
+              "fontFamily": "ebGaramond",
+              "fontSize": "32px",
+              "fontWeight": "400",
+              "lineHeight": "40px"
+            },
+            "headline-xl": {
+              "fontFamily": "ebGaramond",
+              "fontSize": "48px",
+              "fontWeight": "400",
+              "lineHeight": "56px"
+            },
+            "label-caps": {
+              "fontFamily": "manrope",
+              "fontSize": "12px",
+              "fontWeight": "600",
+              "lineHeight": "16px",
+              "letterSpacing": "0.1em"
+            }
+          },
+          "spacing": {
+            "container-max": "1280px",
+            "gutter": "24px",
+            "margin-desktop": "64px",
+            "margin-mobile": "16px",
+            "section-gap": "120px"
+          },
+          "headlineFontFamily": "Eb Garamond",
+          "bodyFontFamily": "Manrope",
+          "labelFontFamily": "Manrope"
+        }
+      },
+      "version": "1"
+    }
+  ]
+}

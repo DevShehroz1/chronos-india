@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | Chronos Properties</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=EB+Garamond:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-input-minimal {
+            border: none;
+            border-bottom: 1px solid #E2E8F0;
+            background: transparent;
+            padding-left: 0;
+            padding-right: 0;
+            border-radius: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .form-input-minimal:focus {
+            outline: none;
+            border-bottom: 1px solid #DCC08A;
+            ring: 0;
+            box-shadow: 0 4px 12px -4px rgba(220, 192, 138, 0.2);
+            background-color: rgba(248, 249, 255, 0.5);
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes mapFadeIn {
+            from {
+                filter: grayscale(100%) brightness(0.8);
+                transform: scale(1.05);
+            }
+            to {
+                filter: grayscale(0%) brightness(1);
+                transform: scale(1);
+            }
+        }
+
+        .animate-form-entrance {
+            animation: slideInRight 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .animate-map-reveal {
+            animation: mapFadeIn 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .shimmer-button {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0) 40%,
+                rgba(255, 255, 255, 0.4) 50%,
+                rgba(255, 255, 255, 0) 60%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(45deg);
+            animation: shimmer 4s infinite;
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-150%) rotate(45deg); }
+            100% { transform: translateX(150%) rotate(45deg); }
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "deep-navy-dark": "#081226",
+                    "tertiary-fixed": "#ffdcc1",
+                    "inverse-surface": "#213145",
+                    "surface-container": "#e5eeff",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#374669",
+                    "primary": "#000921",
+                    "on-secondary-fixed": "#271900",
+                    "on-primary-fixed": "#081a3b",
+                    "secondary-container": "#fed17d",
+                    "secondary": "#7a590f",
+                    "surface": "#f8f9ff",
+                    "surface-variant": "#d3e4fe",
+                    "canvas-white": "#FFFFFF",
+                    "surface-container-high": "#dce9ff",
+                    "surface-bright": "#f8f9ff",
+                    "outline-variant": "#c5c6cf",
+                    "secondary-fixed-dim": "#ecc06e",
+                    "primary-fixed": "#d9e2ff",
+                    "primary-container": "#0f2041",
+                    "on-primary-container": "#7988af",
+                    "tertiary-fixed-dim": "#f0bc92",
+                    "on-tertiary-fixed": "#2e1500",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#cbdbf5",
+                    "inverse-on-surface": "#eaf1ff",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#150700",
+                    "primary-fixed-dim": "#b6c6f0",
+                    "silver-metallic": "#E2E8F0",
+                    "on-surface": "#0b1c30",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#5e4200",
+                    "on-tertiary-container": "#ac7f59",
+                    "outline": "#75777f",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#45464e",
+                    "surface-tint": "#4f5e82",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#623f1e",
+                    "surface-container-low": "#eff4ff",
+                    "gold-light": "#DCC08A",
+                    "tertiary-container": "#361a00",
+                    "on-background": "#0b1c30",
+                    "background": "#f8f9ff",
+                    "secondary-fixed": "#ffdea6",
+                    "on-primary": "#ffffff",
+                    "on-secondary-container": "#78580e",
+                    "inverse-primary": "#b6c6f0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "section-gap": "120px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Manrope"],
+                    "headline-md": ["EB Garamond"],
+                    "label-caps": ["Manrope"],
+                    "headline-xl": ["EB Garamond"],
+                    "button-text": ["Manrope"],
+                    "display-lg-mobile": ["EB Garamond"],
+                    "display-lg": ["EB Garamond"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "fontWeight": "400"}],
+                    "button-text": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "fontWeight": "500"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-canvas-white text-on-surface selection:bg-gold-light selection:text-primary">
+<!-- TopNavBar -->
+<nav class="bg-canvas-white dark:bg-deep-navy-dark w-full h-20 border-b border-silver-metallic dark:border-outline-variant shadow-sm dark:shadow-none sticky top-0 z-50">
+<div class="flex justify-between items-center px-margin-desktop w-full max-w-container-max mx-auto h-full">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed uppercase tracking-tighter">Chronos Properties</div>
+<div class="hidden md:flex gap-8 items-center h-full">
+<a class="font-body-md text-body-md tracking-wide text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-gold-light dark:hover:text-secondary-fixed transition-all duration-300" href="#">Portfolio</a>
+<a class="font-body-md text-body-md tracking-wide text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-gold-light dark:hover:text-secondary-fixed transition-all duration-300" href="#">Services</a>
+<a class="font-body-md text-body-md tracking-wide text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-gold-light dark:hover:text-secondary-fixed transition-all duration-300" href="#">Advisory</a>
+<a class="font-body-md text-body-md tracking-wide text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-gold-light dark:hover:text-secondary-fixed transition-all duration-300" href="#">Insights</a>
+<a class="font-body-md text-body-md tracking-wide text-primary dark:text-primary-fixed font-bold border-b-2 border-gold-light pb-1" href="#">About</a>
+</div>
+<button class="bg-primary text-on-primary font-button-text text-button-text px-6 py-2.5 transition-transform scale-95 active:opacity-80">
+                Enquire Now
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-center justify-center overflow-hidden bg-primary">
+<div class="absolute inset-0 z-0 opacity-40">
+<img class="w-full h-full object-cover" data-alt="A grand, hyper-realistic architectural shot of a modern glass skyscraper reflecting a dramatic twilight sky in Bengaluru. The structure features clean, sharp lines and illuminated interior levels, suggesting an atmosphere of corporate luxury and institutional permanence. Soft blue and gold ambient lighting permeates the scene, aligning with a high-end real estate brand's minimalist and sophisticated aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP0aT2Jl3niGPwQhXlu9gT_F2acM8NeRwwJK1mqOfSJy8vTYbya2IQCy4lOjwGJjIMVroO5tK3Kvb3pdBjKK4khSNeocLcO-saNGZ0XBWxD4ZekeQC91UMGBb6Cvyla1XoxQHu_0gqzPtdCnEMDVsZbQVsrjifgQn0qYi2CFE3Sm1Vj3hRbAWWtzo2dqnhjz0dE3DT0986ddLM3crFmfsBOrGGd5n-A5PupmMnmbPwFsuiQit5TFZSmhotfzrsPcPoNUCn58RE5S2M"/>
+</div>
+<div class="relative z-10 text-center px-4">
+<p class="font-label-caps text-label-caps text-gold-light mb-4 uppercase tracking-[0.2em]">Get in Touch</p>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-canvas-white">Let's Build Something Lasting</h1>
+</div>
+</section>
+<!-- Main Content -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Information -->
+<div class="lg:col-span-5 space-y-12">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-8 border-l-4 border-gold-light pl-6">Our Sanctuary</h2>
+<div class="space-y-8">
+<!-- Address -->
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-gold-light mt-1">location_on</span>
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Office Address</h3>
+<p class="font-body-lg text-body-lg text-primary">Prestige Trade Tower, Palace Road,<br/>High Grounds, Bengaluru, 560001</p>
+</div>
+</div>
+<!-- Phone -->
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-gold-light mt-1">call</span>
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Phone</h3>
+<p class="font-body-lg text-body-lg text-primary">+91 80 4567 8900</p>
+</div>
+</div>
+<!-- Email -->
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-gold-light mt-1">mail</span>
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Email</h3>
+<p class="font-body-lg text-body-lg text-primary">concierge@chronos.in</p>
+</div>
+</div>
+<!-- Hours -->
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-gold-light mt-1">schedule</span>
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Business Hours</h3>
+<p class="font-body-lg text-body-lg text-primary">Monday – Friday: 09:00 — 18:00<br/>Saturday: By Appointment Only</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="w-full aspect-video bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover animate-map-reveal hover:scale-110 transition-transform duration-1000" data-alt="A stylized, minimalist map illustration of Bengaluru's High Grounds area, featuring clean geometric shapes and a refined color palette of silver, deep navy, and subtle gold highlights. The map highlights the central business district with elegant markers, reflecting a sophisticated urban landscape designed for a premium real estate brand." data-location="Bengaluru" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAc_clRO7DDhDTKMuLWa_2FwAikr7VBNXuyYwDEJk2E4XTVmbpioPmvS-yo9E1Co_ghkZ9Ne9kghoxIyoUcIcw-m_J0qlV8wzMFwm3S-vbJBqrKwnW4CoSldUFxze8C8ybJvmDQaNNTwXzwpHCwobqKQAVRbNOGFCQtBIPJpIK9fB_ARbPNmeJK9jQFFdsvrGpNu3gq2_d7ZUMHsdgWUnaQTW94w37ITJbSMyOZGpgnEH9yslXa7mWZLpFEk9XyUIW3xEmUseOCSkN"/>
+</div>
+</div>
+<!-- Right Column: Form -->
+<div class="lg:col-span-7 bg-surface p-8 md:p-12 border border-silver-metallic shadow-sm animate-form-entrance">
+<form class="space-y-10" onsubmit="event.preventDefault(); alert('Enquiry Sent Successfully');">
+<!-- Interest Tags -->
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-6">How can we assist you?</p>
+<div class="flex flex-wrap gap-3">
+<button class="px-5 py-2 border border-silver-metallic font-button-text text-button-text hover:border-gold-light transition-colors duration-300" onclick="this.classList.toggle('bg-primary'); this.classList.toggle('text-white')" type="button">Buying</button>
+<button class="px-5 py-2 border border-silver-metallic font-button-text text-button-text hover:border-gold-light transition-colors duration-300" onclick="this.classList.toggle('bg-primary'); this.classList.toggle('text-white')" type="button">Renting</button>
+<button class="px-5 py-2 border border-silver-metallic font-button-text text-button-text hover:border-gold-light transition-colors duration-300" onclick="this.classList.toggle('bg-primary'); this.classList.toggle('text-white')" type="button">Selling</button>
+<button class="px-5 py-2 border border-silver-metallic font-button-text text-button-text hover:border-gold-light transition-colors duration-300" onclick="this.classList.toggle('bg-primary'); this.classList.toggle('text-white')" type="button">Investment</button>
+<button class="px-5 py-2 border border-silver-metallic font-button-text text-button-text hover:border-gold-light transition-colors duration-300" onclick="this.classList.toggle('bg-primary'); this.classList.toggle('text-white')" type="button">Portfolio Advisory</button>
+</div>
+</div>
+<!-- Personal Info -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-10">
+<div class="flex flex-col group">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 transition-colors duration-300 group-focus-within:text-gold-light">First Name</label>
+<input class="form-input-minimal font-body-md text-body-md" placeholder="Julian" required="" type="text"/>
+</div>
+<div class="flex flex-col group">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 transition-colors duration-300 group-focus-within:text-gold-light">Last Name</label>
+<input class="form-input-minimal font-body-md text-body-md" placeholder="Vandervilt" required="" type="text"/>
+</div>
+<div class="flex flex-col group">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 transition-colors duration-300 group-focus-within:text-gold-light">Email Address</label>
+<input class="form-input-minimal font-body-md text-body-md" placeholder="j.vandervilt@luxury.com" required="" type="email"/>
+</div>
+<div class="flex flex-col group">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 transition-colors duration-300 group-focus-within:text-gold-light">Phone Number</label>
+<input class="form-input-minimal font-body-md text-body-md" placeholder="+91 00000 00000" required="" type="tel"/>
+</div>
+</div>
+<!-- Selections -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-10">
+<div class="flex flex-col group">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 transition-colors duration-300 group-focus-within:text-gold-light">Budget Range</label>
+<select class="form-input-minimal font-body-md text-body-md">
+<option disabled="" selected="" value="">Select Range</option>
+<option>₹5 Cr – ₹10 Cr</option>
+<option>₹10 Cr – ₹25 Cr</option>
+<option>₹25 Cr – ₹50 Cr</option>
+<option>₹50 Cr +</option>
+</select>
+</div>
+<div class="flex flex-col group">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 transition-colors duration-300 group-focus-within:text-gold-light">Timeline</label>
+<select class="form-input-minimal font-body-md text-body-md">
+<option disabled="" selected="" value="">Select Timeline</option>
+<option>Immediate</option>
+<option>3 – 6 Months</option>
+<option>6 – 12 Months</option>
+<option>Planning Stage</option>
+</select>
+</div>
+</div>
+<!-- Message -->
+<div class="flex flex-col group">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 transition-colors duration-300 group-focus-within:text-gold-light">How can we help you?</label>
+<textarea class="form-input-minimal font-body-md text-body-md resize-none" placeholder="Tell us about your architectural aspirations..." rows="4"></textarea>
+</div>
+<!-- Referral -->
+<div class="flex flex-col group">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 transition-colors duration-300 group-focus-within:text-gold-light">How did you hear about us?</label>
+<input class="form-input-minimal font-body-md text-body-md" placeholder="Word of mouth, Social media, Event..." type="text"/>
+</div>
+<!-- Submit -->
+<div class="pt-6">
+<button class="w-full bg-gold-light text-primary font-button-text text-button-text py-5 uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-500 transform active:scale-[0.98] shimmer-button" type="submit">
+                                Send Enquiry
+                            </button>
+<p class="text-center mt-6 font-body-md text-[13px] text-on-surface-variant opacity-60">
+                                By submitting, you agree to our <a class="underline" href="#">Privacy Policy</a> regarding your data.
+                            </p>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-primary-container w-full py-section-gap border-t border-silver-metallic dark:border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed mb-6">Chronos Properties</div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container max-w-sm mb-8 opacity-80">
+                    Redefining the Bengaluru skyline through institutional-grade architectural excellence and bespoke advisory for the discerning few.
+                </p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary dark:text-primary-fixed uppercase mb-6">Portfolio</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light" href="#">Residential Penthouses</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light" href="#">Commercial Estates</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light" href="#">Property Management</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary dark:text-primary-fixed uppercase mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light" href="#">Corporate Governance</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto mt-20 pt-8 border-t border-silver-metallic/30">
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container opacity-60">
+                © 2024 Chronos Properties. Architectural Excellence in Bengaluru.
+            </p>
+</div>
+</footer>
+</body></html>

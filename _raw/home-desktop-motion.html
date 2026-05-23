@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chronos Properties | Architectural Excellence in Bengaluru</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .ebGaramond { font-family: 'EB Garamond', serif; }
+        .manrope { font-family: 'Manrope', sans-serif; }
+        
+        .hero-gradient-overlay {
+            background: linear-gradient(to bottom, rgba(8, 18, 38, 0.4), rgba(8, 18, 38, 0.7));
+        }
+        
+        .gold-accent-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #DCC08A, transparent);
+        }
+
+        /* Ken Burns Effect */
+        @keyframes kenburns {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.15); }
+        }
+        .ken-burns {
+            animation: kenburns 20s ease-out forwards;
+        }
+
+        /* Gold Shimmer Effect */
+        .shimmer-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: 0.5s;
+            opacity: 0;
+        }
+        .shimmer-btn:hover::after {
+            opacity: 1;
+            left: 100%;
+            top: 100%;
+            transition: 0.7s;
+        }
+
+        /* Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "deep-navy-dark": "#081226",
+                      "tertiary-fixed": "#ffdcc1",
+                      "inverse-surface": "#213145",
+                      "surface-container": "#e5eeff",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed-variant": "#374669",
+                      "primary": "#000921",
+                      "on-secondary-fixed": "#271900",
+                      "on-primary-fixed": "#081a3b",
+                      "secondary-container": "#fed17d",
+                      "secondary": "#7a590f",
+                      "surface": "#f8f9ff",
+                      "surface-variant": "#d3e4fe",
+                      "canvas-white": "#FFFFFF",
+                      "surface-container-high": "#dce9ff",
+                      "surface-bright": "#f8f9ff",
+                      "outline-variant": "#c5c6cf",
+                      "secondary-fixed-dim": "#ecc06e",
+                      "primary-fixed": "#d9e2ff",
+                      "primary-container": "#0f2041",
+                      "on-primary-container": "#7988af",
+                      "tertiary-fixed-dim": "#f0bc92",
+                      "on-tertiary-fixed": "#2e1500",
+                      "on-error": "#ffffff",
+                      "surface-dim": "#cbdbf5",
+                      "inverse-on-surface": "#eaf1ff",
+                      "error-container": "#ffdad6",
+                      "on-error-container": "#93000a",
+                      "tertiary": "#150700",
+                      "primary-fixed-dim": "#b6c6f0",
+                      "silver-metallic": "#E2E8F0",
+                      "on-surface": "#0b1c30",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed-variant": "#5e4200",
+                      "on-tertiary-container": "#ac7f59",
+                      "outline": "#75777f",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#45464e",
+                      "surface-tint": "#4f5e82",
+                      "surface-container-highest": "#d3e4fe",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#623f1e",
+                      "surface-container-low": "#eff4ff",
+                      "gold-light": "#DCC08A",
+                      "tertiary-container": "#361a00",
+                      "on-background": "#0b1c30",
+                      "background": "#f8f9ff",
+                      "secondary-fixed": "#ffdea6",
+                      "on-primary": "#ffffff",
+                      "on-secondary-container": "#78580e",
+                      "inverse-primary": "#b6c6f0"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "64px",
+                      "section-gap": "120px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Manrope"],
+                      "headline-md": ["EB Garamond"],
+                      "label-caps": ["Manrope"],
+                      "headline-xl": ["EB Garamond"],
+                      "button-text": ["Manrope"],
+                      "display-lg-mobile": ["EB Garamond"],
+                      "display-lg": ["EB Garamond"],
+                      "body-md": ["Manrope"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "headline-xl": ["48px", {"lineHeight": "56px", "fontWeight": "400"}],
+                      "button-text": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "48px", "fontWeight": "500"}],
+                      "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-canvas-white text-on-surface font-body-md selection:bg-gold-light selection:text-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-canvas-white dark:bg-deep-navy-dark border-b border-silver-metallic dark:border-outline-variant shadow-sm dark:shadow-none w-full h-20 flex items-center">
+<nav class="flex justify-between items-center px-margin-desktop w-full max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed uppercase tracking-tighter">
+                Chronos Properties
+            </div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-body-md text-body-md tracking-wide text-primary dark:text-primary-fixed font-bold border-b-2 border-gold-light pb-1" href="#">Portfolio</a>
+<a class="font-body-md text-body-md tracking-wide text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-gold-light dark:hover:text-secondary-fixed transition-all duration-300" href="#">Services</a>
+<a class="font-body-md text-body-md tracking-wide text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-gold-light dark:hover:text-secondary-fixed transition-all duration-300" href="#">Advisory</a>
+<a class="font-body-md text-body-md tracking-wide text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-gold-light dark:hover:text-secondary-fixed transition-all duration-300" href="#">Insights</a>
+<a class="font-body-md text-body-md tracking-wide text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-gold-light dark:hover:text-secondary-fixed transition-all duration-300" href="#">About</a>
+</div>
+<button class="shimmer-btn bg-primary text-on-primary px-8 py-3 font-button-text text-button-text hover:bg-gold-light hover:text-primary transition-all duration-300 uppercase tracking-widest scale-95 active:opacity-80">
+                Enquire Now
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<img class="w-full h-full object-cover ken-burns" data-alt="A cinematic low-angle shot of a minimalist, luxury architectural structure in Bengaluru, featuring clean white lines and vast glass panels against a deep blue dusk sky. The lighting is soft and warm, highlighting the sophisticated textures of concrete and wood. The overall aesthetic is one of permanence and institutional trust, reflecting a premium real estate brand's identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcyn58lPWuBj9X6skfkmTNJZNRBhoQ7DbOXylDRX1r5nNymRVV9c8UlJa8KdPs9Upfef9EPBcmFTewJlgen_gWhm8BJJh6DzbDcPaiVLXkT1CXtjteIIHakXPl1celzItO_aKM04DUgaMAXRlZMXZ9dzOCp645JeyzyTzAiMLXNGNjpacTtPYUX0hmS8jvdyLvuAyvegHS7uIcx-jMRedVyRzibHunfGpR8TBzSrL2dfm2Z5483tBHGcSfVZjOW6YlU1Y1csC7sBk0"/>
+<div class="absolute inset-0 hero-gradient-overlay"></div>
+</div>
+<div class="relative z-10 text-center text-on-primary max-w-4xl px-margin-mobile">
+<p class="font-label-caps text-label-caps tracking-[0.3em] uppercase mb-6 text-gold-light opacity-90">Real Estate · Bengaluru</p>
+<h1 class="font-display-lg text-display-lg md:text-[100px] leading-tight mb-8 tracking-widest font-extralight italic">CHRONOS</h1>
+<p class="font-headline-md text-headline-md italic mb-12 opacity-80">Built across time with trust.</p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="shimmer-btn w-full md:w-auto bg-gold-light text-primary px-12 py-5 font-button-text text-button-text uppercase tracking-widest font-bold hover:bg-on-primary hover:text-primary transition-all duration-500">
+                        Invest With Us
+                    </button>
+<button class="w-full md:w-auto border border-white/40 text-on-primary px-12 py-5 font-button-text text-button-text uppercase tracking-widest font-bold hover:bg-white/10 backdrop-blur-sm transition-all duration-500">
+                        Our Services
+                    </button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-on-primary/50 animate-bounce">
+<span class="material-symbols-outlined text-4xl">expand_more</span>
+</div>
+</section>
+<!-- Stats Bar -->
+<section class="bg-primary text-on-primary py-16 border-y border-gold-light/20">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+<div class="space-y-2">
+<p class="font-display-lg text-[40px] text-gold-light stat-number" data-target="3">0</p>
+<p class="font-label-caps text-label-caps opacity-60 uppercase">Business Arms</p>
+</div>
+<div class="space-y-2">
+<p class="font-display-lg text-[40px] text-gold-light"><span class="stat-number" data-target="6">0</span>Cr+</p>
+<p class="font-label-caps text-label-caps opacity-60 uppercase">Active Portfolio</p>
+</div>
+<div class="space-y-2">
+<p class="font-display-lg text-[40px] text-gold-light">BLR</p>
+<p class="font-label-caps text-label-caps opacity-60 uppercase">Strategic Focus</p>
+</div>
+<div class="space-y-2">
+<p class="font-display-lg text-[40px] text-gold-light"><span class="stat-number" data-target="360">0</span>°</p>
+<p class="font-label-caps text-label-caps opacity-60 uppercase">Bespoke Service</p>
+</div>
+</div>
+</section>
+<!-- Three Arms Section -->
+<section class="py-section-gap bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-24">
+<h2 class="font-headline-xl text-headline-xl mb-4 italic">Three Arms. One Vision.</h2>
+<div class="gold-accent-line mx-auto w-48"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Property Development -->
+<div class="reveal bg-canvas-white p-12 border border-silver-metallic hover:shadow-xl transition-all duration-500 group">
+<span class="material-symbols-outlined text-gold-light text-5xl mb-8 group-hover:scale-110 transition-transform">architecture</span>
+<h3 class="font-headline-md text-headline-md mb-6">Property Development</h3>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span>
+                                Bespoke Architectural Design
+                            </li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span>
+                                High-Precision Construction
+                            </li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span>
+                                Sustainable Luxury Living
+                            </li>
+</ul>
+</div>
+<!-- Brokerage -->
+<div class="reveal bg-canvas-white p-12 border border-silver-metallic hover:shadow-xl transition-all duration-500 group" style="transition-delay: 100ms;">
+<span class="material-symbols-outlined text-gold-light text-5xl mb-8 group-hover:scale-110 transition-transform">handshake</span>
+<h3 class="font-headline-md text-headline-md mb-6">Brokerage</h3>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span>
+                                Exclusive Off-Market Assets
+                            </li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span>
+                                Strategic Market Analysis
+                            </li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span>
+                                Seamless Transaction Flow
+                            </li>
+</ul>
+</div>
+<!-- Property Services -->
+<div class="reveal bg-canvas-white p-12 border border-silver-metallic hover:shadow-xl transition-all duration-500 group" style="transition-delay: 200ms;">
+<span class="material-symbols-outlined text-gold-light text-5xl mb-8 group-hover:scale-110 transition-transform">real_estate_agent</span>
+<h3 class="font-headline-md text-headline-md mb-6">Property Services</h3>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span>
+                                White-Glove Asset Management
+                            </li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span>
+                                Legal &amp; Regulatory Advisory
+                            </li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span>
+                                Maintenance &amp; Upkeep
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section: 6-grid -->
+<section class="py-section-gap bg-canvas-white">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<p class="font-label-caps text-label-caps text-gold-light uppercase mb-4">Our Ecosystem</p>
+<h2 class="font-display-lg text-display-lg leading-tight">An End-to-End Platform for Modern Estates.</h2>
+</div>
+<a class="font-button-text text-button-text uppercase tracking-widest border-b border-primary pb-1 hover:text-gold-light hover:border-gold-light transition-colors" href="#">View All Services</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-silver-metallic border border-silver-metallic">
+<!-- Grid Item 1 -->
+<div class="reveal bg-canvas-white p-12 hover:bg-surface transition-colors group">
+<h4 class="font-headline-md text-headline-md mb-4">Buy &amp; Sell</h4>
+<p class="font-body-md text-on-surface-variant mb-8">Navigating the premium residential and commercial markets with unparalleled discretion and data-driven insight.</p>
+<span class="material-symbols-outlined text-on-surface opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 duration-300">arrow_forward</span>
+</div>
+<!-- Grid Item 2 -->
+<div class="reveal bg-canvas-white p-12 hover:bg-surface transition-colors group" style="transition-delay: 50ms;">
+<h4 class="font-headline-md text-headline-md mb-4">Letting &amp; Rentals</h4>
+<p class="font-body-md text-on-surface-variant mb-8">Connecting refined individuals with exceptional properties through a curated portfolio of Bangalore's finest spaces.</p>
+<span class="material-symbols-outlined text-on-surface opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 duration-300">arrow_forward</span>
+</div>
+<!-- Grid Item 3 -->
+<div class="reveal bg-canvas-white p-12 hover:bg-surface transition-colors group" style="transition-delay: 100ms;">
+<h4 class="font-headline-md text-headline-md mb-4">Investment Guidance</h4>
+<p class="font-body-md text-on-surface-variant mb-8">Strategic portfolio diversification through high-yield real estate opportunities and fractional ownership models.</p>
+<span class="material-symbols-outlined text-on-surface opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 duration-300">arrow_forward</span>
+</div>
+<!-- Grid Item 4 -->
+<div class="reveal bg-canvas-white p-12 hover:bg-surface transition-colors group" style="transition-delay: 150ms;">
+<h4 class="font-headline-md text-headline-md mb-4">Property Management</h4>
+<p class="font-body-md text-on-surface-variant mb-8">Comprehensive care for your assets, from tenant relations to physical maintenance and fiscal reporting.</p>
+<span class="material-symbols-outlined text-on-surface opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 duration-300">arrow_forward</span>
+</div>
+<!-- Grid Item 5 -->
+<div class="reveal bg-canvas-white p-12 hover:bg-surface transition-colors group" style="transition-delay: 200ms;">
+<h4 class="font-headline-md text-headline-md mb-4">Joint Development</h4>
+<p class="font-body-md text-on-surface-variant mb-8">Unlocking land value through transparent partnership models and world-class architectural execution.</p>
+<span class="material-symbols-outlined text-on-surface opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 duration-300">arrow_forward</span>
+</div>
+<!-- Grid Item 6 -->
+<div class="reveal bg-canvas-white p-12 hover:bg-surface transition-colors group" style="transition-delay: 250ms;">
+<h4 class="font-headline-md text-headline-md mb-4">NRI Advisory</h4>
+<p class="font-body-md text-on-surface-variant mb-8">Specialized cross-border solutions including FEMA compliance, tax advisory, and remote asset oversight.</p>
+<span class="material-symbols-outlined text-on-surface opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 duration-300">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="py-24 bg-primary-container relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-16">
+<div class="max-w-2xl text-on-primary">
+<h2 class="reveal font-display-lg text-display-lg mb-6 leading-tight">Invest in Bangalore's Future.</h2>
+<p class="reveal font-body-lg text-body-lg opacity-80 mb-8" style="transition-delay: 100ms;">Our exclusive investment vehicles consistently deliver 15-18% p.a. returns through strategic asset selection and development in the city's fastest-growing corridors.</p>
+<div class="reveal flex items-center gap-4 text-gold-light border-l-2 border-gold-light pl-6" style="transition-delay: 200ms;">
+<span class="material-symbols-outlined text-4xl">trending_up</span>
+<div>
+<p class="font-label-caps text-label-caps uppercase opacity-60">Projected Returns</p>
+<p class="font-headline-md text-headline-md">15 - 18% p.a.</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-auto">
+<button class="shimmer-btn bg-gold-light text-primary px-16 py-6 font-button-text text-button-text uppercase tracking-widest font-extrabold hover:bg-white transition-all shadow-2xl">
+                            Request Prospectus
+                        </button>
+</div>
+</div>
+</div>
+<!-- Atmospheric decoration -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-white opacity-[0.02] -skew-x-12 translate-x-1/2"></div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-section-gap bg-canvas-white">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5">
+<p class="font-label-caps text-label-caps text-gold-light uppercase mb-6">The Chronos Difference</p>
+<h2 class="font-headline-xl text-headline-xl mb-12">Why sophisticated investors choose us.</h2>
+<div class="space-y-12">
+<div class="reveal flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 border border-gold-light/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-gold-light">location_on</span>
+</div>
+<div>
+<h4 class="font-body-lg text-body-lg font-bold mb-2 uppercase tracking-wide">Bengaluru Roots</h4>
+<p class="font-body-md text-on-surface-variant">Deeply embedded in the local landscape with proprietary access to emerging real estate trends.</p>
+</div>
+</div>
+<div class="reveal flex gap-6" style="transition-delay: 100ms;">
+<div class="flex-shrink-0 w-12 h-12 border border-gold-light/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-gold-light">visibility</span>
+</div>
+<div>
+<h4 class="font-body-lg text-body-lg font-bold mb-2 uppercase tracking-wide">Institutional Transparency</h4>
+<p class="font-body-md text-on-surface-variant">Corporate governance standards applied to every transaction, ensuring complete peace of mind.</p>
+</div>
+</div>
+<div class="reveal flex gap-6" style="transition-delay: 200ms;">
+<div class="flex-shrink-0 w-12 h-12 border border-gold-light/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-gold-light">loyalty</span>
+</div>
+<div>
+<h4 class="font-body-lg text-body-lg font-bold mb-2 uppercase tracking-wide">White-Glove Service</h4>
+<p class="font-body-md text-on-surface-variant">Personalized advisory that anticipates your needs and manages your time as efficiently as your capital.</p>
+</div>
+</div>
+<div class="reveal flex gap-6" style="transition-delay: 300ms;">
+<div class="flex-shrink-0 w-12 h-12 border border-gold-light/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-gold-light">all_inclusive</span>
+</div>
+<div>
+<h4 class="font-body-lg text-body-lg font-bold mb-2 uppercase tracking-wide">End-to-End Expertise</h4>
+<p class="font-body-md text-on-surface-variant">Eliminating friction by managing the entire property lifecycle within a single, trusted ecosystem.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 mt-16 lg:mt-0 relative">
+<div class="aspect-[4/5] overflow-hidden">
+<img class="w-full h-full object-cover reveal" data-alt="A modern architectural structure with bold geometric lines and large windows reflecting a serene garden. The scene is captured in high-contrast natural light, emphasizing the interplay of light and shadow on the building's smooth, light-colored facade. The composition is elegant and minimalist, conveying a sense of luxury and professional architectural design in a modern city like Bengaluru." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOH4fYQKErE2YaDSjFODdaXxWguBDPtNTO19Cr29LuOvaEfqUp82KzVlQSH9-fgt4lLo7mMNV8V5Gj2qcxsjcX6IelPQJqRfl0HxWPhDkgUs_ocmIw1dg8FQiSIvugbViViRwLOk6DreclU9xfLSyB_DAyerV1A50rR4RsOLPqjzNRVgPNNmoDLyMfwj5QbK_E9bWu-rw-g8_0uQRsoAP1n9L1chN2YLR0CIyBGH8x0u7Awf1QOlnhrjGvW4RwkM4b4yjyuy9UnB1q"/>
+</div>
+<!-- Overlapping small image for asymmetric look -->
+<div class="reveal absolute -bottom-12 -left-12 w-1/2 aspect-video hidden md:block border-[12px] border-canvas-white shadow-xl" style="transition-delay: 400ms;">
+<img class="w-full h-full object-cover" data-alt="A detailed close-up of high-quality architectural materials like brushed steel, dark marble, and polished walnut. The lighting is focused and warm, highlighting the refined textures. The image represents the 'White-Glove Service' and attention to detail inherent in the Chronos Properties brand, maintaining a high-end, professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsIYhZq02ncadIuWcGyt-QkWT3i0oWG9etkdZ6DuTt7FO7AA7IWWeqayy1GXE1ObCJFA2YGxp1YdTiG9gw1Py7K4HcQWzsdpYou4FfAJ7uJbh6jFEqP5TKkfCaG2DLBdoF2PF455_GI1zqufH1JIKZfIlA2vwRJecWSLJBY1iy_O6N9u_bzrIsX-TX69K4bjxYaQBiCPFZ3_3GE4fnQqVORMd__yeiKEF5Pv3hI_nfH2jICZ2jY_PFg8CBpufYcfavuf-7KQfkr24j"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Quote Section -->
+<section class="py-section-gap bg-surface flex items-center justify-center">
+<div class="max-w-4xl px-margin-mobile text-center">
+<span class="reveal material-symbols-outlined text-6xl text-gold-light/40 mb-8">format_quote</span>
+<blockquote class="reveal font-display-lg text-display-lg italic leading-tight mb-8" style="transition-delay: 100ms;">
+                    "Real estate is not just built on land. It is built on trust, time, and the right partner."
+                </blockquote>
+<div class="reveal gold-accent-line mx-auto w-32 mb-4" style="transition-delay: 200ms;"></div>
+<cite class="reveal font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant not-italic" style="transition-delay: 300ms;">Institutional Philosophy, Chronos</cite>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-primary-container text-on-surface dark:text-on-primary-container py-section-gap border-t border-silver-metallic dark:border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand Column -->
+<div class="md:col-span-1 space-y-8">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed uppercase tracking-tighter">
+                    Chronos Properties
+                </div>
+<p class="font-body-md text-on-surface-variant dark:text-on-primary-container/80 max-w-xs">
+                    Redefining the architectural landscape of Bengaluru through institutional integrity and bespoke craftsmanship.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-silver-metallic flex items-center justify-center hover:bg-gold-light hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-silver-metallic flex items-center justify-center hover:bg-gold-light hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+</div>
+</div>
+<!-- Links Column 1 -->
+<div class="space-y-6">
+<h4 class="font-label-caps text-label-caps uppercase tracking-widest font-bold">Offerings</h4>
+<ul class="space-y-4 font-body-md">
+<li><a class="text-on-surface-variant dark:text-on-primary-container opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light" href="#">Residential Penthouses</a></li>
+<li><a class="text-on-surface-variant dark:text-on-primary-container opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light" href="#">Commercial Estates</a></li>
+<li><a class="text-on-surface-variant dark:text-on-primary-container opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light" href="#">Property Management</a></li>
+</ul>
+</div>
+<!-- Links Column 2 -->
+<div class="space-y-6">
+<h4 class="font-label-caps text-label-caps uppercase tracking-widest font-bold">Company</h4>
+<ul class="space-y-4 font-body-md">
+<li><a class="text-on-surface-variant dark:text-on-primary-container opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light" href="#">Corporate Governance</a></li>
+<li><a class="text-on-surface-variant dark:text-on-primary-container opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant dark:text-on-primary-container opacity-80 hover:opacity-100 underline underline-offset-4 decoration-gold-light" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<!-- Newsletter Column -->
+<div class="space-y-6">
+<h4 class="font-label-caps text-label-caps uppercase tracking-widest font-bold">Contact</h4>
+<p class="font-body-md text-on-surface-variant dark:text-on-primary-container/80">
+                    Level 12, UB City, Vittal Mallya Rd,<br/>
+                    Bengaluru, Karnataka 560001
+                </p>
+<a class="font-body-md text-primary dark:text-primary-fixed font-semibold block" href="mailto:concierge@chronos.properties">concierge@chronos.properties</a>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-24 pt-8 border-t border-silver-metallic/30 text-center">
+<p class="font-label-caps text-label-caps text-on-surface-variant opacity-60 uppercase tracking-widest">
+                © 2024 Chronos Properties. Architectural Excellence in Bengaluru.
+            </p>
+</div>
+</footer>
+<script>
+        // Intersection Observer for Reveal Animations
+        const revealOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Stats Counter Animation
+        const counterOptions = {
+            threshold: 1.0
+        };
+
+        const animateCounter = (el) => {
+            const target = parseInt(el.getAttribute('data-target'));
+            let current = 0;
+            const increment = target / 50;
+            const updateCounter = () => {
+                if (current < target) {
+                    current += increment;
+                    el.innerText = Math.ceil(current);
+                    setTimeout(updateCounter, 20);
+                } else {
+                    el.innerText = target;
+                }
+            };
+            updateCounter();
+        };
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, counterOptions);
+
+        document.querySelectorAll('.stat-number').forEach(el => {
+            counterObserver.observe(el);
+        });
+
+        // Ensure smooth scroll for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>
