@@ -826,6 +826,10 @@ input:where([type='file']):focus {
   margin-right: auto;
 }
 
+.mb-0 {
+  margin-bottom: 0px;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -1352,6 +1356,10 @@ input:where([type='file']):focus {
   padding: 1rem;
 }
 
+.p-5 {
+  padding: 1.25rem;
+}
+
 .p-6 {
   padding: 1.5rem;
 }
@@ -1490,10 +1498,6 @@ input:where([type='file']):focus {
 
 .text-\[13px\] {
   font-size: 13px;
-}
-
-.text-\[22px\] {
-  font-size: 22px;
 }
 
 .text-\[40px\] {
@@ -2203,6 +2207,14 @@ input:where([type='file']):focus {
     margin-bottom: 5rem;
   }
 
+  .md\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .md\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2239,6 +2251,10 @@ input:where([type='file']):focus {
     flex-direction: row;
   }
 
+  .md\:items-start {
+    align-items: flex-start;
+  }
+
   .md\:p-12 {
     padding: 3rem;
   }
@@ -2256,6 +2272,14 @@ input:where([type='file']):focus {
   .md\:py-6 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+  }
+
+  .md\:text-left {
+    text-align: left;
+  }
+
+  .md\:font-headline-md {
+    font-family: EB Garamond, Georgia, serif;
   }
 
   .md\:text-\[100px\] {
